@@ -3,7 +3,8 @@ app:
     type:     annotation
 
 formation_admin:
-    resource: "@FormationAdminBundle/Ressources/config/routing.yml"
+    resource: "@FormationAdminBundle/Resources/config/routing.yml"
+    prefix: /admin
 
 gallery:
     resource: '@SonataMediaBundle/Resources/config/routing/gallery.xml'
@@ -12,3 +13,6 @@ gallery:
 media:
     resource: '@SonataMediaBundle/Resources/config/routing/media.xml'
     prefix: /media
+
+user_bundle:
+   resource: "@FormationUserBundle/Resources/config/routing.yml"
