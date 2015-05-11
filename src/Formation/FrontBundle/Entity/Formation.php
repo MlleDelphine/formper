@@ -1,0 +1,241 @@
+<?php
+
+namespace Formation\FrontBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
+use Symfony\Component\Validator\Constraints as Assert;
+
+/**
+ * Formation
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Formation\FrontBundle\Entity\Repository\FormationRepository")
+ */
+class Formation
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255)
+     */
+    private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="short_description", type="string", length=255)
+     */
+    private $shortDescription;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="long_description", type="text")
+     */
+    private $longDescription;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="price", type="float")
+     */
+    private $price;
+
+    /**
+     * @Gedmo\Slug(fields={"name"}, separator="-", updatable=true, unique=true)
+     * @ORM\Column(length=128, unique=true)
+     */
+    private $slug;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="published", type="boolean", options={"default" = 0})
+     */
+    private $published;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Formation\FrontBundle\Entity\Teacher", inversedBy="formations")
+     */
+    private $teacher;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Formation\FrontBundle\Entity\Level", inversedBy="formations")
+     */
+    private $level;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Formation\FrontBundle\Entity\Session", mappedBy="formation", cascade={"remove, persist"})
+     */
+    private $sessions;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Formation\FrontBundle\Entity\Technology", inversedBy="formations")
+     * @ORM\JoinTable(name="formations_technologies")
+     */
+    private $technologies;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Formation\FrontBundle\Entity\Requirement", mappedBy="formation", cascade={"remove", "persist"})
+     */
+    private $requirements;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     * @return Formation
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string 
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set shortDescription
+     *
+     * @param string $shortDescription
+     * @return Formation
+     */
+    public function setShortDescription($shortDescription)
+    {
+        $this->shortDescription = $shortDescription;
+
+        return $this;
+    }
+
+    /**
+     * Get shortDescription
+     *
+     * @return string 
+     */
+    public function getShortDescription()
+    {
+        return $this->shortDescription;
+    }
+
+    /**
+     * Set longDescription
+     *
+     * @param string $longDescription
+     * @return Formation
+     */
+    public function setLongDescription($longDescription)
+    {
+        $this->longDescription = $longDescription;
+
+        return $this;
+    }
+
+    /**
+     * Get longDescription
+     *
+     * @return string 
+     */
+    public function getLongDescription()
+    {
+        return $this->longDescription;
+    }
+
+    /**
+     * Set price
+     *
+     * @param float $price
+     * @return Formation
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    /**
+     * Get price
+     *
+     * @return float 
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     * @return Formation
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string 
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * Set teacher
+     *
+     * @param \Formation\FrontBundle\Entity\Teacher $teacher
+     * @return Formation
+     */
+    public function setTeacher(\Formation\FrontBundle\Entity\Teacher $teacher = null)
+    {
+        $this->teacher = $teacher;
+
+        return $this;
+    }
+
+    /**
+     * Get teacher
+     *
+     * @return \Formation\FrontBundle\Entity\Teacher 
+     */
+    public function getTeacher()
+    {
+        return $this->teacher;
+    }
+}

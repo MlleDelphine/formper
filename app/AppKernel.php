@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
             new Formation\AdminBundle\FormationAdminBundle(),
+            new Formation\FrontBundle\FormationFrontBundle(),
 
             //Sonata Media
             new Sonata\MediaBundle\SonataMediaBundle(),

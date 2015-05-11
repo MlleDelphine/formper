@@ -72,6 +72,7 @@ doctrine:
                      SonataMediaBundle: ~
                      FormationAdminBundle: ~
                      FormationUserBundle: ~
+                     FormationFrontBundle: ~
                      FOSUserBundle: ~
                      translatable:
                          type: annotation
