@@ -53,10 +53,6 @@ class Technology
      */
     private $formations;
 
-    /**
-     * @ORM\OneToMany(targetEntity="Formation\FrontBundle\Entity\Requirement", mappedBy="technology", cascade={"remove", "persist"})
-     */
-    private $requirements;
 
     /**
      * Get id
@@ -118,7 +114,7 @@ class Technology
      */
     public function __construct()
     {
-        $this->teachers = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->teacher = new \Doctrine\Common\Collections\ArrayCollection();
         $this->created = new \Datetime();
     }
 
@@ -145,69 +141,5 @@ class Technology
         return $this->slug;
     }
 
-    /**
-     * Add teachers
-     *
-     * @param \Formation\FrontBundle\Entity\Teacher $teachers
-     * @return Technology
-     */
-    public function addTeacher(\Formation\FrontBundle\Entity\Teacher $teachers)
-    {
-        $this->teachers[] = $teachers;
 
-        return $this;
-    }
-
-    /**
-     * Remove teachers
-     *
-     * @param \Formation\FrontBundle\Entity\Teacher $teachers
-     */
-    public function removeTeacher(\Formation\FrontBundle\Entity\Teacher $teachers)
-    {
-        $this->teachers->removeElement($teachers);
-    }
-
-    /**
-     * Get teachers
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getTeachers()
-    {
-        return $this->teachers;
-    }
-
-    /**
-     * Add formations
-     *
-     * @param \Formation\FrontBundle\Entity\Formation $formations
-     * @return Technology
-     */
-    public function addFormation(\Formation\FrontBundle\Entity\Formation $formations)
-    {
-        $this->formations[] = $formations;
-
-        return $this;
-    }
-
-    /**
-     * Remove formations
-     *
-     * @param \Formation\FrontBundle\Entity\Formation $formations
-     */
-    public function removeFormation(\Formation\FrontBundle\Entity\Formation $formations)
-    {
-        $this->formations->removeElement($formations);
-    }
-
-    /**
-     * Get formations
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getFormations()
-    {
-        return $this->formations;
-    }
 }

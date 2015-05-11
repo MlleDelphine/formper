@@ -30,6 +30,11 @@ class Subscription
      */
     private $created;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Formation\FrontBundle\Entity\Formation", inversedBy="subscriptions", cascade={"persist"})
+     */
+    private $formation;
+
 
     /**
      * Get id

@@ -1,7 +1,7 @@
 sonata_media:
     db_driver: doctrine_orm
     class:
-        media:              Application\Sonata\MediaBundle\Entity\Media #à changer (avant :  Application\Sonata\MediaBundle\Entity\Media)
+        media:              Formation\MediaBundle\Entity\Media #à changer (avant :  Application\Sonata\MediaBundle\Entity\Media)
         gallery:            Application\Sonata\MediaBundle\Entity\Gallery
         gallery_has_media:  Application\Sonata\MediaBundle\Entity\GalleryHasMedia
     default_context: default
@@ -36,7 +36,7 @@ sonata_media:
                 small:   { width: 200 , quality: 100}
                 medium:  { height: 750,  quality: 100}
                 large:   { width: 500, quality: 100 }
-        training_media:
+        formation_media:
             providers:
                 - sonata.media.provider.image
                 - sonata.media.provider.file

@@ -73,6 +73,7 @@ doctrine:
                      FormationAdminBundle: ~
                      FormationUserBundle: ~
                      FormationFrontBundle: ~
+                     FormationMediaBundle: ~
                      FOSUserBundle: ~
                      translatable:
                          type: annotation
