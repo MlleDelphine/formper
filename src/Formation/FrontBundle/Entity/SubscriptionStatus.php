@@ -36,7 +36,10 @@ class SubscriptionStatus
      */
     private $slug;
 
-
+    /**
+     * @ORM\OneToMany(targetEntity="Formation\FrontBundle\Entity\Subscription", mappedBy="status", cascade={"persist"})
+     */
+    private $subscriptions;
 
     /**
      * Get id
@@ -69,5 +72,68 @@ class SubscriptionStatus
     public function getName()
     {
         return $this->name;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->subscriptions = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     * @return SubscriptionStatus
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string 
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * Add subscriptions
+     *
+     * @param \Formation\FrontBundle\Entity\Subscription $subscriptions
+     * @return SubscriptionStatus
+     */
+    public function addSubscription(\Formation\FrontBundle\Entity\Subscription $subscriptions)
+    {
+        $this->subscriptions[] = $subscriptions;
+
+        return $this;
+    }
+
+    /**
+     * Remove subscriptions
+     *
+     * @param \Formation\FrontBundle\Entity\Subscription $subscriptions
+     */
+    public function removeSubscription(\Formation\FrontBundle\Entity\Subscription $subscriptions)
+    {
+        $this->subscriptions->removeElement($subscriptions);
+    }
+
+    /**
+     * Get subscriptions
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getSubscriptions()
+    {
+        return $this->subscriptions;
     }
 }

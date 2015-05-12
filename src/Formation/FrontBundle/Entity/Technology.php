@@ -210,4 +210,37 @@ class Technology
     {
         return $this->formations;
     }
+
+    /**
+     * Add requirements
+     *
+     * @param \Formation\FrontBundle\Entity\Requirement $requirements
+     * @return Technology
+     */
+    public function addRequirement(\Formation\FrontBundle\Entity\Requirement $requirements)
+    {
+        $this->requirements[] = $requirements;
+
+        return $this;
+    }
+
+    /**
+     * Remove requirements
+     *
+     * @param \Formation\FrontBundle\Entity\Requirement $requirements
+     */
+    public function removeRequirement(\Formation\FrontBundle\Entity\Requirement $requirements)
+    {
+        $this->requirements->removeElement($requirements);
+    }
+
+    /**
+     * Get requirements
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getRequirements()
+    {
+        return $this->requirements;
+    }
 }

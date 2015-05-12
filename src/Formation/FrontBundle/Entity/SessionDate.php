@@ -51,6 +51,13 @@ class SessionDate
      */
     private $timeEnd;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Formation\FrontBundle\Entity\Session", inversedBy="sessionDates", cascade={"persist", "remove"})
+     * @ORM\JoinColumn(name="session_id", referencedColumnName="id", onDelete="CASCADE")
+     */
+    private $session;
+
+
 
     /**
      * Get id
@@ -152,5 +159,28 @@ class SessionDate
     public function getTimeEnd()
     {
         return $this->timeEnd;
+    }
+
+    /**
+     * Set session
+     *
+     * @param \Formation\FrontBundle\Entity\Session $session
+     * @return SessionDate
+     */
+    public function setSession(\Formation\FrontBundle\Entity\Session $session = null)
+    {
+        $this->session = $session;
+
+        return $this;
+    }
+
+    /**
+     * Get session
+     *
+     * @return \Formation\FrontBundle\Entity\Session 
+     */
+    public function getSession()
+    {
+        return $this->session;
     }
 }

@@ -71,7 +71,7 @@ class Teacher
     private $technologies;
 
     /**
-     * @ORM\OneToMany(targetEntity="Formation\FrontBundle\Entity\Formation", mappedBy="teacher", cascade={"persist"}, onDelete="SET NULL")
+     * @ORM\OneToMany(targetEntity="Formation\FrontBundle\Entity\Formation", mappedBy="teacher", cascade={"persist"})
      */
     private $formations;
 

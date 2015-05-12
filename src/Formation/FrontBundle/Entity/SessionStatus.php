@@ -1,6 +1,6 @@
 <?php
 
-namespace Formation\FrontBundle\Entity\Repository;
+namespace Formation\FrontBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -36,6 +36,11 @@ class SessionStatus
      */
     private $slug;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Formation\FrontBundle\Entity\Session", mappedBy="status", cascade={"persist"})
+     */
+    private $sessions;
+
 
 
     /**
@@ -69,5 +74,68 @@ class SessionStatus
     public function getName()
     {
         return $this->name;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->sessions = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     * @return SessionStatus
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string 
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * Add sessions
+     *
+     * @param \Formation\FrontBundle\Entity\Session $sessions
+     * @return SessionStatus
+     */
+    public function addSession(\Formation\FrontBundle\Entity\Session $sessions)
+    {
+        $this->sessions[] = $sessions;
+
+        return $this;
+    }
+
+    /**
+     * Remove sessions
+     *
+     * @param \Formation\FrontBundle\Entity\Session $sessions
+     */
+    public function removeSession(\Formation\FrontBundle\Entity\Session $sessions)
+    {
+        $this->sessions->removeElement($sessions);
+    }
+
+    /**
+     * Get sessions
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getSessions()
+    {
+        return $this->sessions;
     }
 }

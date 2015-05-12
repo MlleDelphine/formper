@@ -65,12 +65,14 @@ class Formation
     private $published;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Formation\FrontBundle\Entity\Teacher", inversedBy="formations")
+     * @ORM\ManyToOne(targetEntity="Formation\FrontBundle\Entity\Teacher", inversedBy="formations", cascade={"persist"})
+     * @ORM\JoinColumn(name="teacher_id", referencedColumnName="id", onDelete="SET NULL")
      */
     private $teacher;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Formation\FrontBundle\Entity\Level", inversedBy="formations")
+     * @ORM\ManyToOne(targetEntity="Formation\FrontBundle\Entity\Level", inversedBy="formations", cascade={"persist"})
+     * @ORM\JoinColumn(onDelete="SET NULL")
      */
     private $level;
 
@@ -96,7 +98,7 @@ class Formation
     private $documents;
 
     /**
-     * @ORM\OneToMany(targetEntity="Formation\FrontBundle\Entity\Subscription", mappedBy="formation", onDelete="SET NULL")
+     * @ORM\OneToMany(targetEntity="Formation\FrontBundle\Entity\Subscription", mappedBy="formation", cascade={"persist"} )
      */
     private $subscriptions;
 
@@ -247,5 +249,227 @@ class Formation
     public function getTeacher()
     {
         return $this->teacher;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->sessions = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->technologies = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->requirements = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->documents = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->subscriptions = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Set published
+     *
+     * @param boolean $published
+     * @return Formation
+     */
+    public function setPublished($published)
+    {
+        $this->published = $published;
+
+        return $this;
+    }
+
+    /**
+     * Get published
+     *
+     * @return boolean 
+     */
+    public function getPublished()
+    {
+        return $this->published;
+    }
+
+    /**
+     * Set level
+     *
+     * @param \Formation\FrontBundle\Entity\Level $level
+     * @return Formation
+     */
+    public function setLevel(\Formation\FrontBundle\Entity\Level $level = null)
+    {
+        $this->level = $level;
+
+        return $this;
+    }
+
+    /**
+     * Get level
+     *
+     * @return \Formation\FrontBundle\Entity\Level 
+     */
+    public function getLevel()
+    {
+        return $this->level;
+    }
+
+    /**
+     * Add sessions
+     *
+     * @param \Formation\FrontBundle\Entity\Session $sessions
+     * @return Formation
+     */
+    public function addSession(\Formation\FrontBundle\Entity\Session $sessions)
+    {
+        $this->sessions[] = $sessions;
+
+        return $this;
+    }
+
+    /**
+     * Remove sessions
+     *
+     * @param \Formation\FrontBundle\Entity\Session $sessions
+     */
+    public function removeSession(\Formation\FrontBundle\Entity\Session $sessions)
+    {
+        $this->sessions->removeElement($sessions);
+    }
+
+    /**
+     * Get sessions
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getSessions()
+    {
+        return $this->sessions;
+    }
+
+    /**
+     * Add technologies
+     *
+     * @param \Formation\FrontBundle\Entity\Technology $technologies
+     * @return Formation
+     */
+    public function addTechnology(\Formation\FrontBundle\Entity\Technology $technologies)
+    {
+        $this->technologies[] = $technologies;
+
+        return $this;
+    }
+
+    /**
+     * Remove technologies
+     *
+     * @param \Formation\FrontBundle\Entity\Technology $technologies
+     */
+    public function removeTechnology(\Formation\FrontBundle\Entity\Technology $technologies)
+    {
+        $this->technologies->removeElement($technologies);
+    }
+
+    /**
+     * Get technologies
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getTechnologies()
+    {
+        return $this->technologies;
+    }
+
+    /**
+     * Add requirements
+     *
+     * @param \Formation\FrontBundle\Entity\Requirement $requirements
+     * @return Formation
+     */
+    public function addRequirement(\Formation\FrontBundle\Entity\Requirement $requirements)
+    {
+        $this->requirements[] = $requirements;
+
+        return $this;
+    }
+
+    /**
+     * Remove requirements
+     *
+     * @param \Formation\FrontBundle\Entity\Requirement $requirements
+     */
+    public function removeRequirement(\Formation\FrontBundle\Entity\Requirement $requirements)
+    {
+        $this->requirements->removeElement($requirements);
+    }
+
+    /**
+     * Get requirements
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getRequirements()
+    {
+        return $this->requirements;
+    }
+
+    /**
+     * Add documents
+     *
+     * @param \Formation\MediaBundle\Entity\Media $documents
+     * @return Formation
+     */
+    public function addDocument(\Formation\MediaBundle\Entity\Media $documents)
+    {
+        $this->documents[] = $documents;
+
+        return $this;
+    }
+
+    /**
+     * Remove documents
+     *
+     * @param \Formation\MediaBundle\Entity\Media $documents
+     */
+    public function removeDocument(\Formation\MediaBundle\Entity\Media $documents)
+    {
+        $this->documents->removeElement($documents);
+    }
+
+    /**
+     * Get documents
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getDocuments()
+    {
+        return $this->documents;
+    }
+
+    /**
+     * Add subscriptions
+     *
+     * @param \Formation\FrontBundle\Entity\Subscription $subscriptions
+     * @return Formation
+     */
+    public function addSubscription(\Formation\FrontBundle\Entity\Subscription $subscriptions)
+    {
+        $this->subscriptions[] = $subscriptions;
+
+        return $this;
+    }
+
+    /**
+     * Remove subscriptions
+     *
+     * @param \Formation\FrontBundle\Entity\Subscription $subscriptions
+     */
+    public function removeSubscription(\Formation\FrontBundle\Entity\Subscription $subscriptions)
+    {
+        $this->subscriptions->removeElement($subscriptions);
+    }
+
+    /**
+     * Get subscriptions
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getSubscriptions()
+    {
+        return $this->subscriptions;
     }
 }

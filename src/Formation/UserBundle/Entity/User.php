@@ -43,6 +43,12 @@ class User extends BaseUser
      */
     private $phonenumber;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Formation\FrontBundle\Entity\Subscription", mappedBy="user", cascade={"persist"})
+     */
+    private $subscriptions;
+
+
 
     public function __construct()
     {
@@ -126,5 +132,38 @@ class User extends BaseUser
     public function getPhonenumber()
     {
         return $this->phonenumber;
+    }
+
+    /**
+     * Add subscriptions
+     *
+     * @param \Formation\FrontBundle\Entity\Subscription $subscriptions
+     * @return User
+     */
+    public function addSubscription(\Formation\FrontBundle\Entity\Subscription $subscriptions)
+    {
+        $this->subscriptions[] = $subscriptions;
+
+        return $this;
+    }
+
+    /**
+     * Remove subscriptions
+     *
+     * @param \Formation\FrontBundle\Entity\Subscription $subscriptions
+     */
+    public function removeSubscription(\Formation\FrontBundle\Entity\Subscription $subscriptions)
+    {
+        $this->subscriptions->removeElement($subscriptions);
+    }
+
+    /**
+     * Get subscriptions
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getSubscriptions()
+    {
+        return $this->subscriptions;
     }
 }

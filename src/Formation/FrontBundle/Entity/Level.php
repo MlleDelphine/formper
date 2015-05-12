@@ -3,6 +3,7 @@
 namespace Formation\FrontBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Level
@@ -35,12 +36,12 @@ class Level
     private $slug;
 
     /**
-     * @ORM\OneToMany(targetEntity="Formation\FrontBundle\Entity\Formation", mappedBy="teacher", cascade={"persist"})
+     * @ORM\OneToMany(targetEntity="Formation\FrontBundle\Entity\Formation", mappedBy="level", cascade={"persist"})
      */
     private $formations;
 
     /**
-     * @ORM\OneToMany(targetEntity="Formation\FrontBundle\Entity\Requirement", mappedBy="level", cascade={"persist"}, onDelete="SET NULL")
+     * @ORM\OneToMany(targetEntity="Formation\FrontBundle\Entity\Requirement", mappedBy="level", cascade={"persist"})
      */
     private $requirements;
 
@@ -77,5 +78,102 @@ class Level
     public function getName()
     {
         return $this->name;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->formations = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->requirements = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     * @return Level
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string 
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * Add formations
+     *
+     * @param \Formation\FrontBundle\Entity\Formation $formations
+     * @return Level
+     */
+    public function addFormation(\Formation\FrontBundle\Entity\Formation $formations)
+    {
+        $this->formations[] = $formations;
+
+        return $this;
+    }
+
+    /**
+     * Remove formations
+     *
+     * @param \Formation\FrontBundle\Entity\Formation $formations
+     */
+    public function removeFormation(\Formation\FrontBundle\Entity\Formation $formations)
+    {
+        $this->formations->removeElement($formations);
+    }
+
+    /**
+     * Get formations
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getFormations()
+    {
+        return $this->formations;
+    }
+
+    /**
+     * Add requirements
+     *
+     * @param \Formation\FrontBundle\Entity\Requirement $requirements
+     * @return Level
+     */
+    public function addRequirement(\Formation\FrontBundle\Entity\Requirement $requirements)
+    {
+        $this->requirements[] = $requirements;
+
+        return $this;
+    }
+
+    /**
+     * Remove requirements
+     *
+     * @param \Formation\FrontBundle\Entity\Requirement $requirements
+     */
+    public function removeRequirement(\Formation\FrontBundle\Entity\Requirement $requirements)
+    {
+        $this->requirements->removeElement($requirements);
+    }
+
+    /**
+     * Get requirements
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getRequirements()
+    {
+        return $this->requirements;
     }
 }

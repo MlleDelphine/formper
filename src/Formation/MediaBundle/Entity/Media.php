@@ -28,7 +28,7 @@ class Media extends BaseMedia
     private $identification_name;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Formation\FrontBundle\Entity\Formation", inversedBy="documents")
+     * @ORM\ManyToOne(targetEntity="Formation\FrontBundle\Entity\Formation", inversedBy="documents", cascade={"persist", "remove"})
      */
     private $formation;
 
