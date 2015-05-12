@@ -27,7 +27,8 @@
     "sonata-project/seo-bundle": "2.0.*@dev",
     "knplabs/knp-menu": "2.0.*@dev",
     "knplabs/knp-menu-bundle": "dev-master",
-    "gedmo/doctrine-extensions": "dev-master"
+    "gedmo/doctrine-extensions": "dev-master",
+    "brown298/data-tables-bundle": "dev-master"
 
   },
   "require-dev": {

@@ -10,6 +10,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
  *
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="Formation\FrontBundle\Entity\Repository\SessionRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Session
 {
@@ -52,7 +53,7 @@ class Session
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="updated", type="datetime")
+     * @ORM\Column(name="updated", type="datetime", nullable=true)
      */
     private $updated;
 
@@ -76,10 +77,6 @@ class Session
      * @ORM\OneToMany(targetEntity="Formation\FrontBundle\Entity\SessionDate", mappedBy="session", cascade={"all"})
      */
     private $sessionDates;
-
-
-
-
 
     /**
      * Get id
@@ -165,12 +162,21 @@ class Session
      *
      * @param \DateTime $updated
      * @return Session
+     *
      */
     public function setUpdated($updated)
     {
         $this->updated = $updated;
 
         return $this;
+    }
+
+    /**
+     * @ORM\PreUpdate
+     */
+    public function updateDate()
+    {
+        $this->setUpdated(new \Datetime());
     }
 
     /**

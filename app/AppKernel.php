@@ -33,6 +33,9 @@ class AppKernel extends Kernel
 
             #new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Genemu\Bundle\FormBundle\GenemuFormBundle(),
+
+            //DataTables
+            new Brown298\DataTablesBundle\Brown298DataTablesBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

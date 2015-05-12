@@ -1,3 +1,7 @@
 formation_admin_homepage:
     path:     /
     defaults: { _controller: FormationAdminBundle:Default:index }
+
+formation_admin_level:
+    resource: "@FormationAdminBundle/Resources/config/routing/level.yml"
+    prefix:   /level

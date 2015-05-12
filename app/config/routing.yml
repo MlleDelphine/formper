@@ -1,3 +1,7 @@
+formation_media:
+    resource: "@FormationMediaBundle/Resources/config/routing.yml"
+    prefix:   /
+
 formation_front:
     resource: "@FormationFrontBundle/Resources/config/routing.yml"
     prefix:   /
