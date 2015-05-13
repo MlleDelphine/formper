@@ -5,3 +5,23 @@ formation_admin_homepage:
 formation_admin_level:
     resource: "@FormationAdminBundle/Resources/config/routing/level.yml"
     prefix:   /level
+
+formation_admin_subscriptionstatus:
+    resource: "@FormationAdminBundle/Resources/config/routing/subscriptionstatus.yml"
+    prefix:   /subscriptionstatus
+
+formation_admin_technology:
+    resource: "@FormationAdminBundle/Resources/config/routing/technology.yml"
+    prefix:   /technology
+
+formation_admin_sessionstatus:
+    resource: "@FormationAdminBundle/Resources/config/routing/sessionstatus.yml"
+    prefix:   /sessionstatus
+
+formation_admin_formation:
+    resource: "@FormationAdminBundle/Resources/config/routing/formation.yml"
+    prefix:   /formation
+
+formation_admin_session:
+    resource: "@FormationAdminBundle/Resources/config/routing/session.yml"
+    prefix:   /session

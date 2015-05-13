@@ -1,4 +1,16 @@
-{% extends '::base.html.twig' %}
+{% extends "::baseadmin.html.twig" %}
+
+{% block title %}
+    {{ parent() }} - Listing des différents niveaux
+{% endblock %}
+
+{% block sidebarmenu %}
+    {{ include('FormationAdminBundle::sidebar-menu.html.twig',{ 'pseudo': 'Delphine'}) }}
+{% endblock %}
+
+ {% block headersection %}
+     {{ include('FormationAdminBundle::header.html.twig') }}
+ {% endblock %}
 
 {% block body -%}
     <h1>Level</h1>

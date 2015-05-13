@@ -197,6 +197,12 @@ class Session
         $this->sessionDates = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
+
+    public function __toString()
+    {
+        return (string)$this->getName();
+    }
+
     /**
      * Set slug
      *

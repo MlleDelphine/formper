@@ -103,6 +103,12 @@ class Formation
     private $subscriptions;
 
 
+    public function __toString()
+    {
+        return (string)$this->getName();
+    }
+
+
     /**
      * Get id
      *

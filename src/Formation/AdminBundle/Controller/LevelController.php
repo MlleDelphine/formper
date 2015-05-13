@@ -8,6 +8,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Formation\FrontBundle\Entity\Level;
 use Formation\AdminBundle\Form\LevelType;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+
 /**
  * Level controller.
  *
@@ -18,15 +21,26 @@ class LevelController extends Controller
     /**
      * Lists all Level entities.
      *
+     * @package Formation\AdminBundle\Controller
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
-        $em = $this->getDoctrine()->getManager();
+//        $em = $this->getDoctrine()->getManager();
+//
+//        $entities = $em->getRepository('FormationFrontBundle:Level')->findAll();
+//
+//        return $this->render('FormationAdminBundle:Level:index.html.twig', array(
+//            'entities' => $entities,
+//        ));
 
-        $entities = $em->getRepository('FormationFrontBundle:Level')->findAll();
+        $dataTable = $this->get('data_tables.manager')->getTable('levelTable');
+
+        if ($response = $dataTable->ProcessRequest($request)) {
+            return $response;
+        }
 
         return $this->render('FormationAdminBundle:Level:index.html.twig', array(
-            'entities' => $entities,
+            'dataTable' => $dataTable,
         ));
     }
     /**
@@ -95,7 +109,7 @@ class LevelController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('FormationAdminBundle:Level')->find($id);
+        $entity = $em->getRepository('FormationFrontBundle:Level')->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Level entity.');
@@ -117,7 +131,7 @@ class LevelController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('FormationAdminBundle:Level')->find($id);
+        $entity = $em->getRepository('FormationFrontBundle:Level')->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Level entity.');
@@ -159,7 +173,7 @@ class LevelController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('FormationAdminBundle:Level')->find($id);
+        $entity = $em->getRepository('FormationFrontBundle:Level')->find($id);
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Level entity.');
@@ -192,7 +206,7 @@ class LevelController extends Controller
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $entity = $em->getRepository('FormationAdminBundle:Level')->find($id);
+            $entity = $em->getRepository('FormationFrontBundle:Level')->find($id);
 
             if (!$entity) {
                 throw $this->createNotFoundException('Unable to find Level entity.');

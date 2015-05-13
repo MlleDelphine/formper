@@ -209,6 +209,12 @@ class Teacher
         $this->created = new \Datetime();
     }
 
+    public function __toString()
+    {
+        return (string)$this->getFirstName().' '.$this->getLastName();
+    }
+
+
     /**
      * Set slug
      *

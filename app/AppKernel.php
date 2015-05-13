@@ -17,8 +17,10 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
+
             new Formation\AdminBundle\FormationAdminBundle(),
             new Formation\FrontBundle\FormationFrontBundle(),
+            new Formation\MediaBundle\FormationMediaBundle(),
 
             //Sonata Media
             new Sonata\MediaBundle\SonataMediaBundle(),

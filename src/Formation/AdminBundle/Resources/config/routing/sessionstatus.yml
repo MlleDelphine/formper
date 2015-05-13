@@ -1,0 +1,30 @@
+sessionstatus:
+    path:     /
+    defaults: { _controller: "FormationAdminBundle:SessionStatus:index" }
+
+sessionstatus_show:
+    path:     /{id}/show
+    defaults: { _controller: "FormationAdminBundle:SessionStatus:show" }
+
+sessionstatus_new:
+    path:     /new
+    defaults: { _controller: "FormationAdminBundle:SessionStatus:new" }
+
+sessionstatus_create:
+    path:     /create
+    defaults: { _controller: "FormationAdminBundle:SessionStatus:create" }
+    methods:  POST
+
+sessionstatus_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FormationAdminBundle:SessionStatus:edit" }
+
+sessionstatus_update:
+    path:     /{id}/update
+    defaults: { _controller: "FormationAdminBundle:SessionStatus:update" }
+    methods:  [POST, PUT]
+
+sessionstatus_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FormationAdminBundle:SessionStatus:delete" }
+    methods:  [POST, DELETE]

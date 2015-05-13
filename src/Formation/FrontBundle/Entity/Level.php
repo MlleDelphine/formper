@@ -5,11 +5,18 @@ namespace Formation\FrontBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 
+use Brown298\DataTablesBundle\MetaData as DataTable;
+
+
+
+
 /**
  * Level
  *
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="Formation\FrontBundle\Entity\Repository\LevelRepository")
+ *
+
  */
 class Level
 {
@@ -19,6 +26,7 @@ class Level
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
+     *
      */
     private $id;
 
@@ -26,6 +34,7 @@ class Level
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255)
+     *
      */
     private $name;
 
@@ -44,7 +53,6 @@ class Level
      * @ORM\OneToMany(targetEntity="Formation\FrontBundle\Entity\Requirement", mappedBy="level", cascade={"persist"})
      */
     private $requirements;
-
 
 
     /**
@@ -86,6 +94,11 @@ class Level
     {
         $this->formations = new \Doctrine\Common\Collections\ArrayCollection();
         $this->requirements = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    public function __toString()
+    {
+        return (string)$this->getName();
     }
 
     /**
@@ -176,4 +189,8 @@ class Level
     {
         return $this->requirements;
     }
+
+
+
+
 }

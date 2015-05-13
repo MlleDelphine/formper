@@ -12,4 +12,19 @@ use Doctrine\ORM\EntityRepository;
  */
 class LevelRepository extends EntityRepository
 {
+    /**
+     * getQueryBuilder
+     *
+     * @param Request $request
+     *
+     * @return null
+     */
+    public function getQueryBuilder(Request $request = null)
+    {
+        $userRepository = $this->container->get('doctrine.orm.entity_manager')
+            ->getRepository('FormationFrontBundle:Level');
+        $qb = $userRepository->createQueryBuilder('level');
+
+        return $qb;
+    }
 }

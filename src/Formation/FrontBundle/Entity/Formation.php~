@@ -58,15 +58,53 @@ class Formation
     private $slug;
 
     /**
+     * @var boolean
+     *
+     * @ORM\Column(name="published", type="boolean", options={"default" = 0})
+     */
+    private $published;
+
+    /**
      * @ORM\ManyToOne(targetEntity="Formation\FrontBundle\Entity\Teacher", inversedBy="formations")
      */
     private $teacher;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Formation\FrontBundle\Entity\Level", inversedBy="formations")
+     */
+    private $level;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Formation\FrontBundle\Entity\Session", mappedBy="formation", cascade={"remove", "persist"})
+     */
+    private $sessions;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Formation\FrontBundle\Entity\Technology", inversedBy="formations")
+     * @ORM\JoinTable(name="formations_technologies")
+     */
+    private $technologies;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Formation\FrontBundle\Entity\Requirement", mappedBy="formation", cascade={"remove", "persist"})
+     */
+    private $requirements;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Formation\MediaBundle\Entity\Media", mappedBy="formation", cascade={"all"})
+     */
+    private $documents;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Formation\FrontBundle\Entity\Subscription", mappedBy="formation", cascade={"persist"} )
+     */
+    private $subscriptions;
 
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -89,7 +127,7 @@ class Formation
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -112,7 +150,7 @@ class Formation
     /**
      * Get shortDescription
      *
-     * @return string 
+     * @return string
      */
     public function getShortDescription()
     {
@@ -135,7 +173,7 @@ class Formation
     /**
      * Get longDescription
      *
-     * @return string 
+     * @return string
      */
     public function getLongDescription()
     {
@@ -158,10 +196,56 @@ class Formation
     /**
      * Get price
      *
-     * @return float 
+     * @return float
      */
     public function getPrice()
     {
         return $this->price;
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     * @return Formation
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * Set teacher
+     *
+     * @param \Formation\FrontBundle\Entity\Teacher $teacher
+     * @return Formation
+     */
+    public function setTeacher(\Formation\FrontBundle\Entity\Teacher $teacher = null)
+    {
+        $this->teacher = $teacher;
+
+        return $this;
+    }
+
+    /**
+     * Get teacher
+     *
+     * @return \Formation\FrontBundle\Entity\Teacher
+     */
+    public function getTeacher()
+    {
+        return $this->teacher;
     }
 }

@@ -122,6 +122,12 @@ class Technology
         $this->created = new \Datetime();
     }
 
+
+    public function __toString()
+    {
+        return (string)$this->getName();
+    }
+
     /**
      * Set slug
      *

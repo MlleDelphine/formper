@@ -1,14 +1,26 @@
-{% extends '::base.html.twig' %}
+{% extends "::baseadmin.html.twig" %}
+
+{% block title %}
+    {{ parent() }} - Listing des différents niveaux
+{% endblock %}
+
+{% block sidebarmenu %}
+    {{ include('FormationAdminBundle::sidebar-menu.html.twig',{ 'pseudo': 'Delphine'}) }}
+{% endblock %}
+
+ {% block headersection %}
+     {{ include('FormationAdminBundle::header.html.twig') }}
+ {% endblock %}
 
 {% block body -%}
-    <h1>Level creation</h1>
+    <h1>Ajouter un nouveau niveau</h1>
 
     {{ form(form) }}
 
         <ul class="record_actions">
     <li>
         <a href="{{ path('level') }}">
-            Back to the list
+            Retour à la liste
         </a>
     </li>
 </ul>

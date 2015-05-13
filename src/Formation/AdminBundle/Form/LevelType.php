@@ -1,6 +1,6 @@
 <?php
 
-namespace Formation\FrontBundle\Form;
+namespace Formation\AdminBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -15,8 +15,8 @@ class LevelType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
-            ->add('slug')
+            ->add('name', 'text', array('label' => 'Nom :'))
+
         ;
     }
     
