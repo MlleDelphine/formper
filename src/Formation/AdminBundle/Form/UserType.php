@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class SessionType extends AbstractType
+class UserType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -15,13 +15,9 @@ class SessionType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name', 'text', array('label' => 'Nom :'))
-            ->add('places')
-            ->add('slug')
-            ->add('created')
-            ->add('updated')
-            ->add('formation')
-            ->add('status', 'text', array('label' => 'Etat :'))
+            ->add('lastName')
+            ->add('firstName')
+            ->add('phonenumber')
         ;
     }
     
@@ -31,7 +27,7 @@ class SessionType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Formation\FrontBundle\Entity\Session'
+            'data_class' => 'Formation\UserBundle\Entity\User'
         ));
     }
 
@@ -40,6 +36,6 @@ class SessionType extends AbstractType
      */
     public function getName()
     {
-        return 'formation_frontbundle_session';
+        return 'formation_userbundle_user';
     }
 }

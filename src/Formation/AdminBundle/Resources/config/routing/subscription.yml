@@ -1,0 +1,30 @@
+subscription:
+    path:     /
+    defaults: { _controller: "FormationAdminBundle:Subscription:index" }
+
+subscription_show:
+    path:     /{id}/show
+    defaults: { _controller: "FormationAdminBundle:Subscription:show" }
+
+subscription_new:
+    path:     /new
+    defaults: { _controller: "FormationAdminBundle:Subscription:new" }
+
+subscription_create:
+    path:     /create
+    defaults: { _controller: "FormationAdminBundle:Subscription:create" }
+    methods:  POST
+
+subscription_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FormationAdminBundle:Subscription:edit" }
+
+subscription_update:
+    path:     /{id}/update
+    defaults: { _controller: "FormationAdminBundle:Subscription:update" }
+    methods:  [POST, PUT]
+
+subscription_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FormationAdminBundle:Subscription:delete" }
+    methods:  [POST, DELETE]

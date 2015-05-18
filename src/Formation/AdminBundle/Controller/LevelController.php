@@ -20,8 +20,9 @@ class LevelController extends Controller
 
     /**
      * Lists all Level entities.
-     *
+     * @param \Symfony\Component\HttpFoundation\Request $request
      * @package Formation\AdminBundle\Controller
+     * @return array
      */
     public function indexAction(Request $request)
     {
@@ -38,7 +39,8 @@ class LevelController extends Controller
         if ($response = $dataTable->ProcessRequest($request)) {
             return $response;
         }
-
+var_dump($dataTable);
+        die;
         return $this->render('FormationAdminBundle:Level:index.html.twig', array(
             'dataTable' => $dataTable,
         ));

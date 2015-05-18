@@ -25,3 +25,19 @@ formation_admin_formation:
 formation_admin_session:
     resource: "@FormationAdminBundle/Resources/config/routing/session.yml"
     prefix:   /session
+
+formation_admin_subscription:
+    resource: "@FormationAdminBundle/Resources/config/routing/subscription.yml"
+    prefix:   /subscription
+
+formation_admin_sessiondate:
+    resource: "@FormationAdminBundle/Resources/config/routing/sessiondate.yml"
+    prefix:   /sessiondate
+
+formation_admin_user:
+    resource: "@FormationAdminBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+
+formation_admin_requirement:
+    resource: "@FormationAdminBundle/Resources/config/routing/requirement.yml"
+    prefix:   /requirement

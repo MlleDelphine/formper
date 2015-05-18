@@ -32,6 +32,7 @@ class AppKernel extends Kernel
             //User
             new FOS\UserBundle\FOSUserBundle(),
             new Formation\UserBundle\FormationUserBundle(),
+            new FR3D\LdapBundle\FR3DLdapBundle(),
 
             #new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Genemu\Bundle\FormBundle\GenemuFormBundle(),

@@ -1,0 +1,30 @@
+sessiondate:
+    path:     /
+    defaults: { _controller: "FormationAdminBundle:SessionDate:index" }
+
+sessiondate_show:
+    path:     /{id}/show
+    defaults: { _controller: "FormationAdminBundle:SessionDate:show" }
+
+sessiondate_new:
+    path:     /new
+    defaults: { _controller: "FormationAdminBundle:SessionDate:new" }
+
+sessiondate_create:
+    path:     /create
+    defaults: { _controller: "FormationAdminBundle:SessionDate:create" }
+    methods:  POST
+
+sessiondate_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FormationAdminBundle:SessionDate:edit" }
+
+sessiondate_update:
+    path:     /{id}/update
+    defaults: { _controller: "FormationAdminBundle:SessionDate:update" }
+    methods:  [POST, PUT]
+
+sessiondate_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FormationAdminBundle:SessionDate:delete" }
+    methods:  [POST, DELETE]

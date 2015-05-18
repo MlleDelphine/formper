@@ -1,0 +1,30 @@
+requirement:
+    path:     /
+    defaults: { _controller: "FormationAdminBundle:Requirement:index" }
+
+requirement_show:
+    path:     /{id}/show
+    defaults: { _controller: "FormationAdminBundle:Requirement:show" }
+
+requirement_new:
+    path:     /new
+    defaults: { _controller: "FormationAdminBundle:Requirement:new" }
+
+requirement_create:
+    path:     /create
+    defaults: { _controller: "FormationAdminBundle:Requirement:create" }
+    methods:  POST
+
+requirement_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FormationAdminBundle:Requirement:edit" }
+
+requirement_update:
+    path:     /{id}/update
+    defaults: { _controller: "FormationAdminBundle:Requirement:update" }
+    methods:  [POST, PUT]
+
+requirement_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FormationAdminBundle:Requirement:delete" }
+    methods:  [POST, DELETE]
