@@ -17,16 +17,20 @@ class TechnologyController extends Controller
 
     /**
      * Lists all Technology entities.
-     *
+     * @param \Symfony\Component\HttpFoundation\Request $request
+     * @package Formation\AdminBundle\Controller
+     * @return array
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
-        $em = $this->getDoctrine()->getManager();
+        $dataTable = $this->get('data_tables.manager')->getTable('technologyTable');
 
-        $entities = $em->getRepository('FormationFrontBundle:Technology')->findAll();
+        if ($response = $dataTable->ProcessRequest($request)) {
+            return $response;
+        }
 
         return $this->render('FormationAdminBundle:Technology:index.html.twig', array(
-            'entities' => $entities,
+            'dataTable' => $dataTable,
         ));
     }
     /**

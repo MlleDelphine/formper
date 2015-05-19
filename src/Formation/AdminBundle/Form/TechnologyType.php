@@ -1,6 +1,6 @@
 <?php
 
-namespace Formation\adminBundle\Form;
+namespace Formation\AdminBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -16,10 +16,7 @@ class TechnologyType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('slug')
-            ->add('created')
-            ->add('teachers')
-            ->add('formations')
+            //->add('slug')
         ;
     }
     

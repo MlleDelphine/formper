@@ -17,16 +17,20 @@ class SubscriptionStatusController extends Controller
 
     /**
      * Lists all SubscriptionStatus entities.
-     *
+     * @param \Symfony\Component\HttpFoundation\Request $request
+     * @package Formation\AdminBundle\Controller
+     * @return array
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
-        $em = $this->getDoctrine()->getManager();
+        $dataTable = $this->get('data_tables.manager')->getTable('subscriptionStatusTable');
 
-        $entities = $em->getRepository('FormationFrontBundle:SubscriptionStatus')->findAll();
+        if ($response = $dataTable->ProcessRequest($request)) {
+            return $response;
+        }
 
         return $this->render('FormationAdminBundle:SubscriptionStatus:index.html.twig', array(
-            'entities' => $entities,
+            'dataTable' => $dataTable,
         ));
     }
     /**

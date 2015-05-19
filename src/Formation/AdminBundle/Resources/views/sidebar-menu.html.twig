@@ -6,7 +6,7 @@
         <div class="sidebar-content">
             <!-- Brand -->
             <a href="index.html" class="sidebar-brand">
-                <i class="gi gi-flash"></i><span class="sidebar-nav-mini-hide"><strong>Pro</strong>UI</span>
+                <i class="gi gi-flash"></i><span class="sidebar-nav-mini-hide"><strong>Zephyr</strong>Formation</span>
             </a>
             <!-- END Brand -->
 
@@ -84,53 +84,24 @@
             <!-- Sidebar Navigation -->
             <ul class="sidebar-nav">
                 <li>
-                    <a href="index.html" class=" active"><i class="gi gi-stopwatch sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Dashboard</span></a>
+                    <a href="{{ path("formation") }}"><i class="gi gi-leaf sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Formations</span></a>
                 </li>
                 <li>
-                    <a href="index2.html"><i class="gi gi-leaf sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Dashboard 2</span></a>
+                    <a href="{{ path("session") }}"><i class="gi gi-leaf sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Sessions de formation</span></a>
                 </li>
-                <li>
-                    <a href="#" class="sidebar-nav-menu"><i class="fa fa-angle-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="gi gi-shopping_cart sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">eCommerce</span></a>
-                    <ul>
-                        <li>
-                            <a href="page_ecom_dashboard.html">Dashboard</a>
-                        </li>
-                        <li>
-                            <a href="page_ecom_orders.html">Orders</a>
-                        </li>
-                        <li>
-                            <a href="page_ecom_order_view.html">Order View</a>
-                        </li>
-                        <li>
-                            <a href="page_ecom_products.html">Products</a>
-                        </li>
-                        <li>
-                            <a href="page_ecom_product_edit.html">Product Edit</a>
-                        </li>
-                        <li>
-                            <a href="page_ecom_customer_view.html">Customer View</a>
-                        </li>
-                    </ul>
-                </li>
+
                 <li class="sidebar-header">
                     <span class="sidebar-header-options clearfix"><a href="javascript:void(0)" data-toggle="tooltip" title="Quick Settings"><i class="gi gi-settings"></i></a><a href="javascript:void(0)" data-toggle="tooltip" title="Create the most amazing pages with the widget kit!"><i class="gi gi-lightbulb"></i></a></span>
-                    <span class="sidebar-header-title">Widget Kit</span>
+                    <span class="sidebar-header-title">Paramètres</span>
                 </li>
                 <li>
-                    <a href="page_widgets_stats.html"><i class="gi gi-charts sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Statistics</span></a>
+                    <a href="{{ path("level") }}" ><i class="gi gi-stopwatch sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Niveaux</span></a>
                 </li>
                 <li>
-                    <a href="page_widgets_social.html"><i class="gi gi-share_alt sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Social</span></a>
+                    <a href="{{ path("subscriptionstatus") }}"><i class="gi gi-stopwatch sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Statuts des inscriptions</span></a>
                 </li>
                 <li>
-                    <a href="page_widgets_media.html"><i class="gi gi-film sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Media</span></a>
-                </li>
-                <li>
-                    <a href="page_widgets_links.html"><i class="gi gi-link sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Links</span></a>
-                </li>
-                <li class="sidebar-header">
-                    <span class="sidebar-header-options clearfix"><a href="javascript:void(0)" data-toggle="tooltip" title="Quick Settings"><i class="gi gi-settings"></i></a></span>
-                    <span class="sidebar-header-title">Design Kit</span>
+                    <a href="{{ path("sessionstatus") }}"><i class="gi gi-stopwatch sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Statuts des sessions</span></a>
                 </li>
                 <li>
                     <a href="#" class="sidebar-nav-menu"><i class="fa fa-angle-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="gi gi-certificate sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">User Interface</span></a>

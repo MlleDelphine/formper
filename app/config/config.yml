@@ -48,6 +48,8 @@ assetic:
             inputs:
                 - %kernel.root_dir%/../vendor/datatables/datatables/media/js/jquery.js
                 - %kernel.root_dir%/../vendor/datatables/datatables/media/js/jquery.dataTables.js
+                - %kernel.root_dir%/../web/bundles/adminbundle/js/custom/responsive-datatable.js
+                #- %kernel.root_dir%/../web/bundles/adminbundle/css/custom/dataTables-responsive.css
 
 # Doctrine Configuration
 doctrine:

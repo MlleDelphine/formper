@@ -1,4 +1,10 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: Delphine
+ * Date: 19/05/2015
+ * Time: 17:13
+ */
 
 namespace Formation\FrontBundle\Entity;
 
@@ -14,23 +20,29 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @package Formation\AdminBundle\Datatable
- * @DataTable\Table(id="levelTable")
+ * @DataTable\Table(id="technologyTable")
  * */
-
-class LevelTable extends AbstractQueryBuilderDataTable implements QueryBuilderDataTableInterface{
+class TechnologyTable extends AbstractQueryBuilderDataTable implements QueryBuilderDataTableInterface {
 
     /**
      * @var int
-     * @DataTable\Column(source="level.id", name="ID", class="")
+     * @DataTable\Column(source="technology.id", name="ID", class="")
      */
     public $id;
 
     /**
      * @var string
-     * @DataTable\Column(source="level.name", name="Nom",  class="")
+     * @DataTable\Column(source="technology.name", name="Nom",  class="")
      * @DataTable\DefaultSort()
      */
     public $name;
+
+    /**
+     * @var \DateTime
+     * @DataTable\Column(source="technology.created", name="Date de création",  class="")
+     * @DataTable\Format(dataFields={"created":"technology.created"}, template="FormationAdminBundle::_date_template.html.twig")
+     */
+    public $created;
 
     /**
      * @DataTable\Column(source="", name="Actions",  class="")
@@ -55,8 +67,8 @@ class LevelTable extends AbstractQueryBuilderDataTable implements QueryBuilderDa
     public function getQueryBuilder(Request $request = null)
     {
 
-        $levelRepository = $this->em->getRepository('FormationFrontBundle:Level');
-        $qb = $levelRepository->createQueryBuilder('level');
+        $levelRepository = $this->em->getRepository('FormationFrontBundle:Technology');
+        $qb = $levelRepository->createQueryBuilder('technology');
 
         return $qb;
     }

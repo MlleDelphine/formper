@@ -46,6 +46,11 @@
     {% endblock %}
     <!-- Modernizr (browser feature detection library) & Respond.js (enables responsive CSS code on browsers that don't support it, eg IE8) -->
     <script src="{{ asset('bundles/adminbundle/js/vendor/modernizr-respond.min.js') }}"></script>
+
+    {% javascripts '@data_tables' %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
 </head>
 <body>
 <div id="page-wrapper" >{#class="page-loading"#}
@@ -170,8 +175,6 @@
 <script src="{{ asset('bundles/adminbundle/js/pages/index.js')}}"></script>
 <script>$(function(){ Index.init(); });</script>
 
-{% javascripts '@data_tables' %}
-<script type="text/javascript" src="{{ asset_url }}"></script>
-{% endjavascripts %}
+
 </body>
 </html>

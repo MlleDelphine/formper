@@ -1,7 +1,7 @@
 {% extends "::baseadmin.html.twig" %}
 
 {% block title %}
-    {{ parent() }} - Listing des différents niveaux
+    {{ parent() }} - Listing des différente technologies
 {% endblock %}
 
 {% block sidebarmenu %}
@@ -13,39 +13,16 @@
  {% endblock %}
 
 {% block body -%}
-    <h1>Technology list</h1>
+    <h1>Liste des différents technologies</h1>
 
-    <table class="records_list">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Slug</th>
-                <th>Created</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for entity in entities %}
-            <tr>
-                <td><a href="{{ path('technology_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{{ entity.name }}</td>
-                <td>{{ entity.slug }}</td>
-                <td>{% if entity.created %}{{ entity.created|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('technology_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('technology_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
-                </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    <div class="table-responsive">
+        {{ addDataTable(dataTable,
+        {"language": {
+            'url': 'dataTables.french.lang'
+        }
+        }
+        ) }}
+    </div>
 
         <ul>
         <li>

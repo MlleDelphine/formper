@@ -16,7 +16,7 @@ class SessionStatusType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('slug')
+            //->add('slug')
         ;
     }
     

@@ -26,21 +26,12 @@ class LevelController extends Controller
      */
     public function indexAction(Request $request)
     {
-//        $em = $this->getDoctrine()->getManager();
-//
-//        $entities = $em->getRepository('FormationFrontBundle:Level')->findAll();
-//
-//        return $this->render('FormationAdminBundle:Level:index.html.twig', array(
-//            'entities' => $entities,
-//        ));
-
         $dataTable = $this->get('data_tables.manager')->getTable('levelTable');
 
         if ($response = $dataTable->ProcessRequest($request)) {
             return $response;
         }
-var_dump($dataTable);
-        die;
+
         return $this->render('FormationAdminBundle:Level:index.html.twig', array(
             'dataTable' => $dataTable,
         ));
@@ -150,12 +141,12 @@ var_dump($dataTable);
     }
 
     /**
-    * Creates a form to edit a Level entity.
-    *
-    * @param Level $entity The entity
-    *
-    * @return \Symfony\Component\Form\Form The form
-    */
+     * Creates a form to edit a Level entity.
+     *
+     * @param Level $entity The entity
+     *
+     * @return \Symfony\Component\Form\Form The form
+     */
     private function createEditForm(Level $entity)
     {
         $form = $this->createForm(new LevelType(), $entity, array(
@@ -235,6 +226,6 @@ var_dump($dataTable);
             ->setMethod('DELETE')
             ->add('submit', 'submit', array('label' => 'Delete'))
             ->getForm()
-        ;
+            ;
     }
 }

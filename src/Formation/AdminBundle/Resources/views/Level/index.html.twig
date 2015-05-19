@@ -5,58 +5,25 @@
 {% endblock %}
 
 {% block sidebarmenu %}
-    {{ include('FormationAdminBundle::sidebar-menu.html.twig',{ 'pseudo': 'Delphine'}) }}
+    {{ include('FormationAdminBundle::sidebar-menu.html.twig',{ 'pseudo': 'Delphine !!'}) }}
 {% endblock %}
 
  {% block headersection %}
      {{ include('FormationAdminBundle::header.html.twig') }}
  {% endblock %}
 
+
 {% block body %}
     <h1>Liste des différents niveaux</h1>
 
-    {#<table class="records_list">#}
-        {#<thead>#}
-        {#<tr>#}
-            {#<th>ID</th>#}
-            {#<th>Intitulé</th>#}
-            {#<th>Slug</th>#}
-            {#<th>Actions</th>#}
-        {#</tr>#}
-        {#</thead>#}
-        {#<tbody>#}
-        {#{% for entity in entities %}#}
-            {#<tr>#}
-                {#<td><a href="{{ path('level_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>#}
-                {#<td>{{ entity.name }}</td>#}
-                {#<td>{{ entity.slug }}</td>#}
-                {#<td>#}
-                    {#<ul>#}
-                        {#<li>#}
-                            {#<a href="{{ path('level_show', { 'id': entity.id }) }}">show</a>#}
-                        {#</li>#}
-                        {#<li>#}
-                            {#<a href="{{ path('level_edit', { 'id': entity.id }) }}">edit</a>#}
-                        {#</li>#}
-                    {#</ul>#}
-                {#</td>#}
-            {#</tr>#}
-        {#{% endfor %}#}
-        {#</tbody>#}
-    {#</table>#}
-
-
-    <h2>Annotation Style Example</h2>
-
-    {#{% include "Brown298DtTestBundle:DtAnnotationStyle:content.html.twig" %}#}
-
-    <h4>Example Table</h4>
-    <div class="table-bordered">
-        {{ addDataTable(dataTable) }}
+    <div class="table-responsive">
+        {{ addDataTable(dataTable,
+        {"language": {
+            'url': 'dataTables.french.lang'
+        }
+        }
+        ) }}
     </div>
-
-
-
 
     <ul>
         <li>
