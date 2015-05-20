@@ -160,7 +160,7 @@ genemu_form:
         enabled: true
         configs:
             placeholder: Sélectionner
-            width: element
+            width: off
             allowClear: false
             minimumInputLength: 0
 

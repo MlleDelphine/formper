@@ -71,7 +71,7 @@ class SubscriptionController extends Controller
             'method' => 'POST',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Create'));
+        $form->add('submit', 'submit', array('label' => 'Créer', 'attr' => array('class' => 'btn btn-sm btn-primary')));
 
         return $form;
     }
@@ -151,7 +151,7 @@ class SubscriptionController extends Controller
             'method' => 'PUT',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Update'));
+        $form->add('submit', 'submit', array('label' => 'Valider', 'attr' => array('class' => 'btn btn-sm btn-primary')));
 
         return $form;
     }
@@ -221,7 +221,7 @@ class SubscriptionController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('subscription_delete', array('id' => $id)))
             ->setMethod('DELETE')
-            ->add('submit', 'submit', array('label' => 'Delete'))
+            ->add('submit', 'submit', array('label' => 'Supprimer', 'attr' => array('class' => 'btn btn-sm btn-danger')))
             ->getForm()
         ;
     }

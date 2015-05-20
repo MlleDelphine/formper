@@ -3,6 +3,14 @@
 {% block title %}
     {{ parent() }} - Listing des différents niveaux
 {% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    {% if form is defined %}
+        <link rel="stylesheet" href="{{ asset('bundles/adminbundle/js/select2-4.0.0/css/select2.min.css') }}">
+        {{ form_stylesheet(form) }}
+    {% endif %}
+{% endblock %}
+
 
 {% block sidebarmenu %}
     {{ include('FormationAdminBundle::sidebar-menu.html.twig',{ 'pseudo': 'Delphine'}) }}
@@ -13,15 +21,60 @@
  {% endblock %}
 
 {% block body -%}
-    <h1>Subscription creation</h1>
+    <h1>Section inscription</h1>
 
-    {{ form(form) }}
+    <div class="col-md-12">
+        <div class="block">
+            <div class="block-title">
+                <div class="block-options pull-right">
+                    <a href="{{ path('technology') }}" class="btn btn-alt btn-sm btn-default toggle-bordered enable-tooltip" data-toggle="button" title="Retourner à la liste">Retour</a>
+                </div>
+                <h2>Création d'une nouvelle inscription</h2>
+            </div>
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('subscription') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
+            <form class="form-horizontal form-bordered" action="{{ path('technology_create') }}" method="post" {{ form_enctype(form) }}>
+                <div class="form-group">
+                    {{ form_label(form.formation, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+                    <div class="col-md-9">
+                        {{ form_widget(form.formation, { 'attr': {'class': 'form-control'} }) }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.session, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+                    <div class="col-md-9">
+                        {{ form_widget(form.session, { 'attr': {'class': 'form-control'} }) }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.user, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+                    <div class="col-md-9">
+                        {{ form_widget(form.user, { 'attr': {'class': 'form-control'} }) }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.status, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+                    <div class="col-md-9">
+                        {{ form_widget(form.status, { 'attr': {'class': 'form-control'} }) }}
+                    </div>
+                </div>
+                <div class="form-group form-actions">
+                    <div class="col-md-9 col-md-offset-3">
+                        {{ form_widget(form.submit) }}
+                    </div>
+                </div>
+
+                {{ form_widget(form._token) }}
+            </form>
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    {% if form is defined %}
+        <script src="{{ asset('bundles/adminbundle/js/tinymce/tinymce.min.js') }}"></script>
+        <script src="{{ asset('bundles/adminbundle/js/select2-4.0.0/js/select2.min.js') }}"></script>
+        {{ form_javascript(form) }}
+    {% endif %}
 {% endblock %}

@@ -15,28 +15,38 @@ class SubscriptionType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('formation')
-            ->add('session',  'genemu_jqueryselect2_entity', array(
-                            'class' => 'FormationFrontBundle:Session',
-                            'property' => 'name',
-                            'label' => 'Session',
-                            'multiple' => false
+            ->add('formation', 'genemu_jqueryselect2_entity', array(
+                'class' => 'FormationFrontBundle:Formation',
+                'property' => 'name',
+                'label' => 'Formation',
+                'multiple' => false,
+                'placeholder' => 'Sélectionner'
             ))
-            ->add('status', 'genemu_jqueryselect2_entity', array(
-                            'class' => 'FormationFrontBundle:SessionStatus',
-                            'property' => 'name',
-                            'label' => 'Statut',
-                            'multiple' => false
+            ->add('session',  'genemu_jqueryselect2_entity', array(
+                'class' => 'FormationFrontBundle:Session',
+                'property' => 'name',
+                'label' => 'Session',
+                'multiple' => false,
+                'placeholder' => 'Sélectionner'
             ))
             ->add('user', 'genemu_jqueryselect2_entity', array(
-                            'class' => 'FormationUserBundle:User',
-                            'property' => 'name',
-                            'label' => 'Membre',
-                            'multiple' => false
+                'class' => 'FormationUserBundle:User',
+                'property' => 'name',
+                'label' => 'Membre',
+                'multiple' => false,
+                'placeholder' => 'Sélectionner'
+
+            ))
+            ->add('status', 'genemu_jqueryselect2_entity', array(
+                'class' => 'FormationFrontBundle:SubscriptionStatus',
+                'property' => 'name',
+                'label' => 'Statut',
+                'multiple' => false,
+                'placeholder' => 'Sélectionner'
             ))
         ;
     }
-    
+
     /**
      * @param OptionsResolverInterface $resolver
      */
