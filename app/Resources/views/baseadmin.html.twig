@@ -154,7 +154,7 @@
     </div>
 </div>
 <!-- END User Settings -->
-
+{%  block scripts %}
 <!-- Remember to include excanvas for IE8 chart support -->
 <!--[if IE 8]><script src="js/helpers/excanvas.min.js"></script><![endif]-->
 
@@ -175,6 +175,7 @@
 <script src="{{ asset('bundles/adminbundle/js/pages/index.js')}}"></script>
 <script>$(function(){ Index.init(); });</script>
 
+{% endblock %}
 
 </body>
 </html>

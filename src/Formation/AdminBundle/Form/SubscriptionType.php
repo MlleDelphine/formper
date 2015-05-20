@@ -15,11 +15,25 @@ class SubscriptionType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('created')
             ->add('formation')
-            ->add('session')
-            ->add('status')
-            ->add('user')
+            ->add('session',  'genemu_jqueryselect2_entity', array(
+                            'class' => 'FormationFrontBundle:Session',
+                            'property' => 'name',
+                            'label' => 'Session',
+                            'multiple' => false
+            ))
+            ->add('status', 'genemu_jqueryselect2_entity', array(
+                            'class' => 'FormationFrontBundle:SessionStatus',
+                            'property' => 'name',
+                            'label' => 'Statut',
+                            'multiple' => false
+            ))
+            ->add('user', 'genemu_jqueryselect2_entity', array(
+                            'class' => 'FormationUserBundle:User',
+                            'property' => 'name',
+                            'label' => 'Membre',
+                            'multiple' => false
+            ))
         ;
     }
     
@@ -38,6 +52,6 @@ class SubscriptionType extends AbstractType
      */
     public function getName()
     {
-        return 'formation_frontbundle_subscription';
+        return 'formation_adminbundle_subscription';
     }
 }

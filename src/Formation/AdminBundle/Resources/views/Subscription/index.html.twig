@@ -13,35 +13,16 @@
  {% endblock %}
 
 {% block body -%}
-    <h1>Subscription list</h1>
+    <h1>Liste des inscriptions</h1>
 
-    <table class="records_list">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Created</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for entity in entities %}
-            <tr>
-                <td><a href="{{ path('subscription_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{% if entity.created %}{{ entity.created|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('subscription_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('subscription_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
-                </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    <div class="table-responsive">
+        {{ addDataTable(dataTable,
+        {"language": {
+            'url': 'dataTables.french.lang'
+        }
+        }
+        ) }}
+    </div>
 
         <ul>
         <li>

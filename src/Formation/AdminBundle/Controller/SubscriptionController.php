@@ -17,16 +17,20 @@ class SubscriptionController extends Controller
 
     /**
      * Lists all Subscription entities.
-     *
+     * @param \Symfony\Component\HttpFoundation\Request $request
+     * @package Formation\AdminBundle\Controller
+     * @return array
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
-        $em = $this->getDoctrine()->getManager();
+        $dataTable = $this->get('data_tables.manager')->getTable('subscriptionTable');
 
-        $entities = $em->getRepository('FormationFrontBundle:Subscription')->findAll();
+        if ($response = $dataTable->ProcessRequest($request)) {
+            return $response;
+        }
 
         return $this->render('FormationAdminBundle:Subscription:index.html.twig', array(
-            'entities' => $entities,
+            'dataTable' => $dataTable,
         ));
     }
     /**

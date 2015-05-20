@@ -146,6 +146,24 @@ services:
         calls:
             - [ setAnnotationReader, [ @annotation_reader ] ]
 
+genemu_form:
+    tinymce:
+        enabled: true
+        theme: modern
+        configs:
+            entity_encoding: raw
+            plugins : 'advlist autolink link image lists charmap print preview'
+
+    date: ~
+    image: ~
+    select2:
+        enabled: true
+        configs:
+            placeholder: Sélectionner
+            width: element
+            allowClear: false
+            minimumInputLength: 0
+
 fos_user:
     db_driver: orm
     firewall_name: main

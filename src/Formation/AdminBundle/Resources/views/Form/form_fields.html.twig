@@ -1,0 +1,13 @@
+{% block text_widget %}
+    <div class="form-group">
+        {{ form_label(form.name, {'attr': {'class':'col-md-3 control-label'} }) }}
+        <div class="col-md-9">
+        {{ form_widget(form.name, { 'attr': {'class': 'form-control'} }) }}
+        </div>
+    </div>
+
+    <div class="integer_widget">
+        {% set type = type|default('tex') %}
+        {{ block('form_widget_simple') }}
+    </div>
+{% endblock %}

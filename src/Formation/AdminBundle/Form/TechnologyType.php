@@ -15,8 +15,7 @@ class TechnologyType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
-            //->add('slug')
+            ->add('name', 'text', array('label' => 'Nom'))
         ;
     }
     
@@ -35,6 +34,6 @@ class TechnologyType extends AbstractType
      */
     public function getName()
     {
-        return 'formation_frontbundle_technology';
+        return 'formation_adminbundle_technology';
     }
 }

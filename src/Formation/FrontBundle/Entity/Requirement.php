@@ -40,6 +40,13 @@ class Requirement
     private $level;
 
 
+    public function __toString()
+    {
+        return (string)$this->getFormation()->getName(). ' - '.$this->getLevel()->getName();
+    }
+
+
+
 
     /**
      * Get id

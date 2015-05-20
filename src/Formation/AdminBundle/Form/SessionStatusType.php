@@ -15,7 +15,7 @@ class SessionStatusType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
+            ->add('name', 'text', array('label' => 'Nom'))
             //->add('slug')
         ;
     }
@@ -35,6 +35,6 @@ class SessionStatusType extends AbstractType
      */
     public function getName()
     {
-        return 'formation_frontbundle_sessionstatus';
+        return 'formation_adminbundle_sessionstatus';
     }
 }

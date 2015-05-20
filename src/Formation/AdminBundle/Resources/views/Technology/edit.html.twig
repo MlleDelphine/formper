@@ -13,16 +13,43 @@
  {% endblock %}
 
 {% block body -%}
-    <h1>Technology edit</h1>
+    <h1>Section technologie</h1>
 
-    {{ form(edit_form) }}
+    <div class="col-md-12">
+        <div class="block">
+            <div class="block-title">
+                <div class="block-options pull-right">
+                    <a href="{{ path('technology') }}" class="btn btn-alt btn-sm btn-default toggle-bordered enable-tooltip" data-toggle="button" title="Retourner à la liste">Retour</a>
+                </div>
+                <h2>Edition d'une technologie</h2>
+            </div>
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('technology') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
+            <form class="form-horizontal form-bordered" action="{{ path('technology_create') }}" method="post" {{ form_enctype(edit_form) }}>
+                <div class="form-group">
+                    {{ form_label(edit_form.name, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+                    <div class="col-md-9">
+                        {{ form_widget(edit_form.name, { 'attr': {'class': 'form-control'} }) }}
+                    </div>
+                </div>
+                <div class="form-group form-actions">
+                    <div class="col-md-3 col-md-offset-3">
+                        {{ form_widget(edit_form.submit) }}
+                    </div>
+                </div>
+                {{ form_widget(edit_form._token) }}
+            </form>
+        </div>
+        <div class="block">
+            {{  form_start(delete_form, { 'attr': {'class': 'form-horizontal form-bordered'}}) }}
+            <div class="form-group form-actions">
+                <div class="col-md-1 col-md-offset-11">
+                    {{ form_widget(delete_form.submit) }}
+                </div>
+            </div>
+            {{ form_end(delete_form) }}
+        </div>
+
+    </div>
+
+
 {% endblock %}

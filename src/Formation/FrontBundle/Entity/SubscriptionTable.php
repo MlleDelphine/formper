@@ -2,11 +2,12 @@
 /**
  * Created by PhpStorm.
  * User: Delphine
- * Date: 19/05/2015
- * Time: 17:13
+ * Date: 20/05/2015
+ * Time: 15:22
  */
 
 namespace Formation\FrontBundle\Entity;
+
 
 use Brown298\DataTablesBundle\MetaData as DataTable;
 use Brown298\DataTablesBundle\Model\DataTable\AbstractQueryBuilderDataTable;
@@ -20,27 +21,47 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @package Formation\AdminBundle\Datatable
- * @DataTable\Table(id="technologyTable")
+ * @DataTable\Table(id="subscriptionTable")
  * */
-class TechnologyTable extends AbstractQueryBuilderDataTable implements QueryBuilderDataTableInterface {
+class SubscriptionTable extends AbstractQueryBuilderDataTable implements QueryBuilderDataTableInterface {
 
     /**
      * @var int
-     * @DataTable\Column(source="technology.id", name="ID", class="")
+     * @DataTable\Column(source="subscription.id", name="ID", class="")
      */
     public $id;
 
     /**
-     * @var string
-     * @DataTable\Column(source="technology.name", name="Nom",  class="")
-     * @DataTable\DefaultSort()
+     * @var int
+     * @DataTable\Column(source="subscription.user", name="Membre", class="")
      */
-    public $name;
+    public $user;
+
+
+    /**
+     * @var int
+     * @DataTable\Column(source="subscription.formation", name="Formation", class="")
+     */
+    public $formation;
+
+    /**
+     * @var int
+     * @DataTable\Column(source="subscription.session", name="Session", class="")
+     */
+    public $session;
+
+
+    /**
+     * @var int
+     * @DataTable\Column(source="subscription.status", name="Etat", class="")
+     */
+    public $status;
+
 
     /**
      * @var \DateTime
-     * @DataTable\Column(source="technology.created", name="Date de création",  class="")
-     * @DataTable\Format(dataFields={"created":"technology.created"}, template="FormationAdminBundle::_date_template.html.twig")
+     * @DataTable\Column(source="subscription.created", name="Date de création",  class="")
+     * @DataTable\Format(dataFields={"created":"subscription.created"}, template="FormationAdminBundle::_date_template.html.twig")
      */
     public $created;
 
@@ -49,7 +70,6 @@ class TechnologyTable extends AbstractQueryBuilderDataTable implements QueryBuil
      * @DataTable\Format(dataFields={"id":"level.id"}, template="FormationAdminBundle:Technology:_dataTables_action.html.twig")
      */
     public $action;
-
 
     /**
      * @var bool hydrate results to doctrine objects
@@ -67,8 +87,8 @@ class TechnologyTable extends AbstractQueryBuilderDataTable implements QueryBuil
     public function getQueryBuilder(Request $request = null)
     {
 
-        $levelRepository = $this->em->getRepository('FormationFrontBundle:Technology');
-        $qb = $levelRepository->createQueryBuilder('technology');
+        $levelRepository = $this->em->getRepository('FormationFrontBundle:Subscription');
+        $qb = $levelRepository->createQueryBuilder('subscription');
 
         return $qb;
     }
