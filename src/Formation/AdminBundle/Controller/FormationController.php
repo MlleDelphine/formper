@@ -17,16 +17,33 @@ class FormationController extends Controller
 
     /**
      * Lists all Formation entities.
-     *
+     * @param \Symfony\Component\HttpFoundation\Request $request
+     * @package Formation\AdminBundle\Controller
+     * @return array
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
-        $em = $this->getDoctrine()->getManager();
+        $dataTable = $this->get('data_tables.manager')->getTable('formationTable');
 
-        $entities = $em->getRepository('FormationFrontBundle:Formation')->findAll();
+        if ($response = $dataTable->ProcessRequest($request)) {
+            return $response;
+        }
+
+//        $em = $this->getDoctrine()->getManager();
+//
+//        $entity = $em->getRepository('FormationFrontBundle:Formation')->find($id);
+//
+//        if (!$entity) {
+//            throw $this->createNotFoundException('Unable to find Formation entity.');
+//        }
+//
+//        $deleteForm = $this->createDeleteForm($id);
+
 
         return $this->render('FormationAdminBundle:Formation:index.html.twig', array(
-            'entities' => $entities,
+            'dataTable' => $dataTable,
+//            'entity'      => $entity,
+//            'form'   => $deleteForm->createView(),
         ));
     }
     /**
@@ -67,7 +84,7 @@ class FormationController extends Controller
             'method' => 'POST',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Create'));
+        $form->add('submit', 'submit', array('label' => 'Créer', 'attr' => array('class' => 'btn btn-sm btn-primary')));
 
         return $form;
     }
@@ -147,7 +164,7 @@ class FormationController extends Controller
             'method' => 'PUT',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Update'));
+        $form->add('submit', 'submit', array('label' => 'Valider', 'attr' => array('class' => 'btn btn-sm btn-primary')));
 
         return $form;
     }
@@ -206,6 +223,29 @@ class FormationController extends Controller
     }
 
     /**
+     * Render delete form in modal
+     *
+     * @param $id
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function deleteFormAction($id){
+        $em = $this->getDoctrine()->getManager();
+
+        $entity = $em->getRepository('FormationFrontBundle:Formation')->find($id);
+
+        if (!$entity) {
+            throw $this->createNotFoundException('Unable to find Formation entity.');
+        }
+
+        $deleteForm = $this->createDeleteForm($id);
+
+        return $this->render('FormationAdminBundle:Formation:delete.html.twig', array(
+            'entity'      => $entity,
+            'form'   => $deleteForm->createView(),
+        ));
+    }
+
+    /**
      * Creates a form to delete a Formation entity by id.
      *
      * @param mixed $id The entity id
@@ -217,7 +257,7 @@ class FormationController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('formation_delete', array('id' => $id)))
             ->setMethod('DELETE')
-            ->add('submit', 'submit', array('label' => 'Delete'))
+            ->add('submit', 'submit', array('label' => 'Supprimer', 'attr' => array('class' => 'btn btn-sm btn-danger')))
             ->getForm()
         ;
     }

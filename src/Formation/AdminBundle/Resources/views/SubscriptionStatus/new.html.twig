@@ -18,12 +18,12 @@
         <div class="block">
             <div class="block-title">
                 <div class="block-options pull-right">
-                    <a href="{{ path('technology') }}" class="btn btn-alt btn-sm btn-default toggle-bordered enable-tooltip" data-toggle="button" title="Retourner à la liste">Retour</a>
+                    <a href="{{ path('subscriptionstatus') }}" class="btn btn-alt btn-sm btn-default toggle-bordered enable-tooltip" data-toggle="button" title="Retourner à la liste">Retour</a>
                 </div>
-                <h2>Création d'une nouvelle technologie</h2>
+                <h2>Création d'un nouveau statut d'inscription</h2>
             </div>
 
-            <form class="form-horizontal form-bordered" action="{{ path('technology_create') }}" method="post" {{ form_enctype(form) }}>
+            <form class="form-horizontal form-bordered" action="{{ path('subscriptionstatus_create') }}" method="post" {{ form_enctype(form) }}>
                 <div class="form-group">
                     {{ form_label(form.name, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
                     <div class="col-md-9">

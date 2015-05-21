@@ -74,7 +74,7 @@ class LevelController extends Controller
             'method' => 'POST',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Créer'));
+        $form->add('submit', 'submit', array('label' => 'Créer', 'attr' => array('class' => 'btn btn-sm btn-primary')));
 
         return $form;
     }
@@ -154,7 +154,7 @@ class LevelController extends Controller
             'method' => 'PUT',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Update'));
+        $form->add('submit', 'submit', array('label' => 'Valider', 'attr' => array('class' => 'btn btn-sm btn-primary')));
 
         return $form;
     }
@@ -224,7 +224,7 @@ class LevelController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('level_delete', array('id' => $id)))
             ->setMethod('DELETE')
-            ->add('submit', 'submit', array('label' => 'Delete'))
+            ->add('submit', 'submit', array('label' => 'Supprimer', 'attr' => array('class' => 'btn btn-sm btn-danger')))
             ->getForm()
             ;
     }

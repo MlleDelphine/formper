@@ -2,36 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="adc28545-c5f4-4943-aeae-f5b6d6e7fafd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Formation/FrontBundle/Entity/SubscriptionTable.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Subscription/_dataTables_action.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Form/form_fields.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Formation/FrontBundle/Entity/FormationTable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Formation/_dataTables_action.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Formation/_published.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Formation/_subscriptions.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Formation/_technologies.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Formation/delete.html.twig" />
+      <change type="DELETED" beforePath="C:\Users\Delphine\PhpstormProjects\formation\.idea\.name" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Delphine\PhpstormProjects\formation\.idea\deployment.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Delphine\PhpstormProjects\formation\.idea\encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Delphine\PhpstormProjects\formation\.idea\formation.iml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Delphine\PhpstormProjects\formation\.idea\frameworkRootSettings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Delphine\PhpstormProjects\formation\.idea\misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Delphine\PhpstormProjects\formation\.idea\modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Delphine\PhpstormProjects\formation\.idea\scopes\scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Delphine\PhpstormProjects\formation\.idea\vagrant.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Delphine\PhpstormProjects\formation\.idea\vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Delphine\PhpstormProjects\formation\.idea\watcherTasks.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Delphine\PhpstormProjects\formation\.idea\workspace.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/AdminBundle/Controller/FormationController.php" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Controller/FormationController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/AdminBundle/Form/FormationType.php" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Form/FormationType.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/AdminBundle/Controller/LevelController.php" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Controller/LevelController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/FrontBundle/Entity/Requirement.php" afterPath="$PROJECT_DIR$/src/Formation/FrontBundle/Entity/Requirement.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/AdminBundle/Controller/SessionStatusController.php" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Controller/SessionStatusController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/AdminBundle/Form/SessionStatusType.php" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Form/SessionStatusType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/AdminBundle/Controller/SubscriptionController.php" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Controller/SubscriptionController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/AdminBundle/Controller/SubscriptionStatusController.php" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Controller/SubscriptionStatusController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/AdminBundle/Form/SubscriptionStatusType.php" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Form/SubscriptionStatusType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/AdminBundle/Form/SubscriptionType.php" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Form/SubscriptionType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/AdminBundle/Controller/TechnologyController.php" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Controller/TechnologyController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/FrontBundle/Entity/TechnologyTable.php" afterPath="$PROJECT_DIR$/src/Formation/FrontBundle/Entity/TechnologyTable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/AdminBundle/Form/TechnologyType.php" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Form/TechnologyType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Technology/_dataTables_action.html.twig" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Technology/_dataTables_action.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/AdminBundle/Controller/SessionController.php" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Controller/SessionController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/baseadmin.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/baseadmin.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SessionStatus/edit.html.twig" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SessionStatus/edit.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SubscriptionStatus/edit.html.twig" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SubscriptionStatus/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Technology/edit.html.twig" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Technology/edit.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Formation/index.html.twig" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Formation/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Level/index.html.twig" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Level/index.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Subscription/index.html.twig" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Subscription/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SessionStatus/new.html.twig" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SessionStatus/new.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SubscriptionStatus/index.html.twig" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SubscriptionStatus/index.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Subscription/new.html.twig" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Subscription/new.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SubscriptionStatus/new.html.twig" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SubscriptionStatus/new.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Technology/new.html.twig" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Technology/new.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/sidebar-menu.html.twig" afterPath="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/sidebar-menu.html.twig" />
     </list>
     <ignored path="formation.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
+    <ignored path=".idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,46 +63,94 @@
     <favorites_list name="formation" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7552987">
+    <splitter split-orientation="horizontal" split-proportion="0.685836">
       <split-first>
         <leaf>
-          <file leaf-file-name="Session.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Formation/FrontBundle/Entity/Session.php">
+          <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Formation/index.html.twig">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="17.653847" vertical-offset="459" max-vertical-offset="5865">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <state vertical-scroll-proportion="-28.76923" vertical-offset="0" max-vertical-offset="884">
+                  <caret line="44" column="10" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="SubscriptionController.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Controller/SubscriptionController.php">
+          <file leaf-file-name="_dataTables_action.html.twig" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Formation/_dataTables_action.html.twig">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-7.4615383" vertical-offset="3104" max-vertical-offset="3978">
-                  <caret line="194" column="39" selection-start-line="194" selection-start-column="39" selection-end-line="194" selection-end-column="39" />
+                <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="340">
+                  <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="FormationController.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Controller/FormationController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.67080045" vertical-offset="17" max-vertical-offset="2890">
+                  <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
                   <folding>
-                    <element signature="e#52#97#0#PHP" expanded="true" />
+                    <element signature="e#1396#2020#0#PHP" expanded="false" />
+                    <element signature="e#2204#2592#0#PHP" expanded="false" />
+                    <element signature="e#2678#2979#0#PHP" expanded="false" />
+                    <element signature="e#3054#3597#0#PHP" expanded="false" />
+                    <element signature="e#4512#4932#0#PHP" expanded="false" />
+                    <element signature="e#5003#5884#0#PHP" expanded="false" />
+                    <element signature="e#7406#7772#0#PHP" expanded="false" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Subscription/index.html.twig">
+          <file leaf-file-name="delete.html.twig" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Formation/delete.html.twig">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="680">
-                  <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+                <state vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="476">
+                  <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="baseadmin.html.twig" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/Resources/views/baseadmin.html.twig">
+          <file leaf-file-name="FormationTable.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Formation/FrontBundle/Entity/FormationTable.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-16.346153" vertical-offset="102" max-vertical-offset="3196">
-                  <caret line="31" column="95" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="95" />
+                <state vertical-scroll-proportion="-18.423077" vertical-offset="1000" max-vertical-offset="2057">
+                  <caret line="92" column="99" selection-start-line="92" selection-start-column="99" selection-end-line="92" selection-end-column="99" />
+                  <folding>
+                    <element signature="e#133#185#0#PHP" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_subscriptions.html.twig" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Formation/_subscriptions.html.twig">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="102">
+                  <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="FormationType.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Form/FormationType.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="1173">
+                  <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Formation.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Formation/FrontBundle/Entity/Formation.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-75.84615" vertical-offset="0" max-vertical-offset="8245">
+                  <caret line="118" column="25" selection-start-line="118" selection-start-column="25" selection-end-line="118" selection-end-column="25" />
                   <folding />
                 </state>
               </provider>
@@ -105,28 +159,8 @@
           <file leaf-file-name="new.html.twig" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Subscription/new.html.twig">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-9.423077" vertical-offset="248" max-vertical-offset="1462">
-                  <caret line="29" column="92" selection-start-line="29" selection-start-column="85" selection-end-line="29" selection-end-column="92" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SubscriptionType.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Form/SubscriptionType.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-23.0" vertical-offset="116" max-vertical-offset="1207">
-                  <caret line="44" column="23" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="config.yml" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="2.7557502" vertical-offset="0" max-vertical-offset="3383">
-                  <caret line="148" column="12" selection-start-line="148" selection-start-column="0" selection-end-line="164" selection-end-column="33" />
+                <state vertical-scroll-proportion="-33.615383" vertical-offset="44" max-vertical-offset="1462">
+                  <caret line="54" column="102" selection-start-line="54" selection-start-column="102" selection-end-line="54" selection-end-column="102" />
                   <folding />
                 </state>
               </provider>
@@ -136,86 +170,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="TechnologyController.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Controller/TechnologyController.php">
+          <file leaf-file-name="new.html.twig" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Subscription/new.html.twig">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.80091536" vertical-offset="2292" max-vertical-offset="3179">
-                  <caret line="224" column="121" selection-start-line="224" selection-start-column="38" selection-end-line="224" selection-end-column="121" />
-                  <folding>
-                    <element signature="e#4615#5500#0#PHP" expanded="false" />
-                    <element signature="e#5564#6161#0#PHP" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TechnologyTable.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Formation/FrontBundle/Entity/TechnologyTable.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-13.346154" vertical-offset="418" max-vertical-offset="1292">
-                  <caret line="50" column="19" selection-start-line="46" selection-start-column="4" selection-end-line="50" selection-end-column="19" />
-                  <folding>
-                    <element signature="e#133#185#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Subscription.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Formation/FrontBundle/Entity/Subscription.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-30.076923" vertical-offset="102" max-vertical-offset="3162">
-                  <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Level/index.html.twig">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="714">
-                  <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="25" selection-end-column="10" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TechnologyType.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Form/TechnologyType.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="731">
-                  <caret line="17" column="58" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="58" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="edit.html.twig" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Technology/edit.html.twig">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-5.8461537" vertical-offset="137" max-vertical-offset="1037">
-                  <caret line="17" column="14" selection-start-line="17" selection-start-column="0" selection-end-line="51" selection-end-column="10" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="new.html.twig" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Technology/new.html.twig">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="850">
-                  <caret line="28" column="42" selection-start-line="16" selection-start-column="3" selection-end-line="42" selection-end-column="10" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SessionStatus/show.html.twig">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-12.230769" vertical-offset="5" max-vertical-offset="918">
-                  <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+                <state vertical-scroll-proportion="0.805492" vertical-offset="333" max-vertical-offset="1462">
+                  <caret line="61" column="54" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="54" />
                   <folding />
                 </state>
               </provider>
@@ -231,23 +190,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Formation/FrontBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/config/routing/requirement.yml" />
-        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Requirement/edit.html.twig" />
-        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Requirement/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Requirement/new.html.twig" />
-        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Requirement/show.html.twig" />
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
-        <option value="$PROJECT_DIR$/app/config/security.yml" />
-        <option value="$PROJECT_DIR$/web/bundles/adminbundle/js/custom/french-datatable.js" />
         <option value="$PROJECT_DIR$/web/bundles/adminbundle/js/custom/dataTables.french.lang" />
-        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Level/index.html.twig" />
         <option value="$PROJECT_DIR$/web/bundles/adminbundle/css/dataTables-responsive.css" />
         <option value="$PROJECT_DIR$/web/bundles/adminbundle/js/custom/responsive-datatable.js" />
-        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/sidebar-menu.html.twig" />
         <option value="$PROJECT_DIR$/src/Formation/FrontBundle/Entity/LevelTable.php" />
-        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SubscriptionStatus/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Formation/FrontBundle/Entity/SessionStatusTable.php" />
         <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SessionStatus/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SessionStatus/_dataTables_action.html.twig" />
@@ -255,7 +201,6 @@
         <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SubscriptionStatus/_dataTables_action.html.twig" />
         <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Technology/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Technology/_date_template.html.twig" />
-        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Controller/LevelController.php" />
         <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Form/form_fields.html.twig" />
         <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Level/_dataTables_action.html.twig" />
         <option value="$PROJECT_DIR$/src/Formation/FrontBundle/Entity/TechnologyTable.php" />
@@ -271,17 +216,31 @@
         <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SessionStatus/new.html.twig" />
         <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Form/SubscriptionStatusType.php" />
         <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Controller/SubscriptionStatusController.php" />
-        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SubscriptionStatus/edit.html.twig" />
-        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SubscriptionStatus/new.html.twig" />
         <option value="$PROJECT_DIR$/src/Formation/FrontBundle/Entity/Requirement.php" />
-        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Subscription/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Subscription/_dataTables_action.html.twig" />
         <option value="$PROJECT_DIR$/src/Formation/FrontBundle/Entity/SubscriptionTable.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/baseadmin.html.twig" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Subscription/new.html.twig" />
         <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Controller/SubscriptionController.php" />
         <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Form/SubscriptionType.php" />
+        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/sidebar-menu.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/baseadmin.html.twig" />
+        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SubscriptionStatus/edit.html.twig" />
+        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SubscriptionStatus/new.html.twig" />
+        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SubscriptionStatus/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Subscription/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Level/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Controller/SessionController.php" />
+        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Controller/LevelController.php" />
+        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Subscription/new.html.twig" />
+        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Formation/_published.html.twig" />
+        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Form/FormationType.php" />
+        <option value="$PROJECT_DIR$/src/Formation/FrontBundle/Entity/FormationTable.php" />
+        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Formation/_subscriptions.html.twig" />
+        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Formation/_technologies.html.twig" />
+        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Formation/_dataTables_action.html.twig" />
+        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Formation/delete.html.twig" />
+        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Formation/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Formation/AdminBundle/Controller/FormationController.php" />
       </list>
     </option>
   </component>
@@ -318,6 +277,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -333,132 +293,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="formation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="formation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="formation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="formation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="formation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="adminbundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="formation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="formation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="adminbundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="formation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="formation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="adminbundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="select2-4.0.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="formation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="formation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="adminbundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="select2-4.0.0" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -543,6 +377,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="formation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="formation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Formation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Subscription" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -608,6 +476,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Formation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdminBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="formation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="formation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -634,27 +528,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="formation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="formation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -664,20 +539,20 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="options.lastSelected" value="reference.settings.deploy.options" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Ignored.Files" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/NetBeansProjects/MoovTime/moovtime-src" />
     <property name="list.type.of.created.stylesheet" value="DTD" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Delphine\PhpstormProjects\formation\src\Formation\AdminBundle\Resources\views\Formation" />
       <recent name="C:\Users\Delphine\PhpstormProjects\formation\web\bundles\adminbundle\js\select2-1.0.0" />
       <recent name="C:\Users\Delphine\PhpstormProjects\formation\src\Formation\AdminBundle\Resources\views\Subscription" />
       <recent name="C:\Users\Delphine\PhpstormProjects\formation\src\Formation\AdminBundle\Resources\views\Technology" />
       <recent name="C:\Users\Delphine\PhpstormProjects\formation\src\Formation\AdminBundle\Resources\views\SessionStatus" />
-      <recent name="C:\Users\Delphine\PhpstormProjects\formation\src\Formation\AdminBundle\Resources\views\SubscriptionStatus" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Delphine\PhpstormProjects\formation\web\bundles\adminbundle\js\tinymce" />
@@ -695,20 +570,17 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
     <configuration default="true" type="com.intellij.database.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
       <option name="VM_PARAMETERS" value="" />
       <option name="USER_CFG_CLASS" />
       <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
-    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
-      <BehatRunner />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="b6596dc5-6703-4a0a-939d-cd0a05f7280e" server_name="VMFormation">
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -718,6 +590,9 @@
       <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="b6596dc5-6703-4a0a-939d-cd0a05f7280e" server_name="VMFormation">
       <method />
     </configuration>
     <list size="0" />
@@ -736,31 +611,31 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="false" />
+    <frame x="1912" y="-8" width="1936" height="1096" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3375932" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32800853" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3375932" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943678" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17092651" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17252396" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3375932" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32800853" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -774,17 +649,17 @@
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21246007" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -810,159 +685,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Formation/FrontBundle/Entity/SubscriptionStatus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2533">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Form/SessionType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="913">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SessionStatus/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="663">
-          <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/config/routing/subscriptionstatus.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52135813" vertical-offset="0" max-vertical-offset="913">
-          <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/FrontBundle/Entity/Technology.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.680778" vertical-offset="102" max-vertical-offset="4352">
-          <caret line="43" column="21" selection-start-line="38" selection-start-column="4" selection-end-line="43" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Form/LevelType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="913">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Technology/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="680">
-          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-          <folding>
-            <marker date="1432048733049" expanded="true" signature="-1:-1" placeholder="{% block body ...%}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Controller/LevelController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66132724" vertical-offset="714" max-vertical-offset="4029">
-          <caret line="76" column="62" selection-start-line="76" selection-start-column="62" selection-end-line="76" selection-end-column="62" />
-          <folding>
-            <element signature="e#52#97#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Form/form_fields.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="306">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/_date_template.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="887">
-          <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/config/routing/technology.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-          <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Level/_dataTables_action.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.210823" vertical-offset="0" max-vertical-offset="887">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Technology/_dataTables_action.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13416009" vertical-offset="0" max-vertical-offset="887">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SessionStatus/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.230769" vertical-offset="5" max-vertical-offset="918">
-          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/FrontBundle/Entity/SessionStatusTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1750572" vertical-offset="0" max-vertical-offset="1071">
-          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SessionStatus/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82494277" vertical-offset="112" max-vertical-offset="986">
-          <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/config/routing/sessionstatus.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="913">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SessionStatus/new.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71967965" vertical-offset="0" max-vertical-offset="874">
-          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SessionStatus/_dataTables_action.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.210823" vertical-offset="0" max-vertical-offset="887">
           <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -970,7 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.67080045" vertical-offset="0" max-vertical-offset="887">
           <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -978,7 +703,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-27.461538" vertical-offset="3009" max-vertical-offset="3910">
           <caret line="223" column="121" selection-start-line="223" selection-start-column="121" selection-end-line="223" selection-end-column="121" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -986,15 +710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5446224" vertical-offset="0" max-vertical-offset="1054">
           <caret line="41" column="117" selection-start-line="41" selection-start-column="117" selection-end-line="41" selection-end-column="117" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SubscriptionStatus/_dataTables_action.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.019165726" vertical-offset="0" max-vertical-offset="887">
-          <caret line="1" column="62" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1002,38 +717,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-25.5" vertical-offset="0" max-vertical-offset="3910">
           <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Technology/edit.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8461537" vertical-offset="137" max-vertical-offset="1037">
+        <state vertical-scroll-proportion="0.0" vertical-offset="137" max-vertical-offset="1037">
           <caret line="17" column="14" selection-start-line="17" selection-start-column="0" selection-end-line="51" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SubscriptionStatus/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43592677" vertical-offset="112" max-vertical-offset="986">
-          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SubscriptionStatus/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2874859" vertical-offset="0" max-vertical-offset="887">
-          <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SubscriptionStatus/new.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7002288" vertical-offset="0" max-vertical-offset="874">
-          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -1042,7 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1050,15 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.67080045" vertical-offset="0" max-vertical-offset="887">
           <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/FrontBundle/Entity/LevelTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.89359266" vertical-offset="137" max-vertical-offset="1037">
-          <caret line="62" column="0" selection-start-line="34" selection-start-column="3" selection-end-line="62" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1074,23 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-25.115385" vertical-offset="95" max-vertical-offset="2295">
           <caret line="44" column="91" selection-start-line="44" selection-start-column="91" selection-end-line="44" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/FrontBundle/Entity/Formation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5640732" vertical-offset="1326" max-vertical-offset="8245">
-          <caret line="109" column="0" selection-start-line="105" selection-start-column="4" selection-end-line="109" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Level/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="714">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="25" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1106,9 +769,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.43742955" vertical-offset="745" max-vertical-offset="1632">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="e#134#186#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1116,7 +776,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11499436" vertical-offset="0" max-vertical-offset="887">
           <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1124,72 +783,158 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Technology/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="850">
+          <caret line="28" column="42" selection-start-line="16" selection-start-column="3" selection-end-line="42" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846" vertical-offset="153" max-vertical-offset="1360">
-          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2447" max-vertical-offset="3383">
+          <caret line="157" column="12" selection-start-line="157" selection-start-column="12" selection-end-line="157" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Subscription/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/header.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="680">
-          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.33254716" vertical-offset="619" max-vertical-offset="2550">
+          <caret line="53" column="11" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="11" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/sidebar-menu.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.23077" vertical-offset="1268" max-vertical-offset="2856">
+          <caret line="104" column="43" selection-start-line="104" selection-start-column="43" selection-end-line="104" selection-end-column="43" />
+          <folding>
+            <element signature="n#li#10;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#li#11;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#li#12;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#li#13;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#li#14;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#li#15;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#li#16;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#li#17;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/adminbundle/js/pages/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2193">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/baseadmin.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.346153" vertical-offset="102" max-vertical-offset="3196">
-          <caret line="31" column="95" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="95" />
+        <state vertical-scroll-proportion="-26.923077" vertical-offset="2309" max-vertical-offset="3230">
+          <caret line="177" column="14" selection-start-line="177" selection-start-column="14" selection-end-line="177" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/FrontBundle/Entity/Subscription.php">
+    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SubscriptionStatus/_dataTables_action.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-30.076923" vertical-offset="102" max-vertical-offset="3162">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.019165726" vertical-offset="0" max-vertical-offset="887">
+          <caret line="1" column="62" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SubscriptionStatus/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5823799" vertical-offset="86" max-vertical-offset="986">
+          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Formation/FrontBundle/Entity/TechnologyTable.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.346154" vertical-offset="418" max-vertical-offset="1292">
+        <state vertical-scroll-proportion="0.39702517" vertical-offset="418" max-vertical-offset="1292">
           <caret line="50" column="19" selection-start-line="46" selection-start-column="4" selection-end-line="50" selection-end-column="19" />
           <folding>
-            <element signature="e#133#185#0#PHP" expanded="true" />
+            <element signature="e#133#185#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Technology/new.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Formation/FrontBundle/Entity/Subscription.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="850">
-          <caret line="28" column="42" selection-start-line="16" selection-start-column="3" selection-end-line="42" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.8947368" vertical-offset="102" max-vertical-offset="3162">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SubscriptionStatus/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="833">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Form/TechnologyType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="731">
+        <state vertical-scroll-proportion="0.2874859" vertical-offset="0" max-vertical-offset="887">
           <caret line="17" column="58" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/SubscriptionStatus/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.26923" vertical-offset="0" max-vertical-offset="867">
+          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Controller/SubscriptionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.4107552" vertical-offset="1191" max-vertical-offset="3978">
+          <caret line="194" column="39" selection-start-line="194" selection-start-column="39" selection-end-line="194" selection-end-column="39" />
+          <folding>
+            <element signature="e#52#97#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Form/LevelType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2874859" vertical-offset="0" max-vertical-offset="887">
+          <caret line="17" column="59" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Controller/LevelController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-26.423077" vertical-offset="3155" max-vertical-offset="4029">
+          <caret line="226" column="121" selection-start-line="226" selection-start-column="121" selection-end-line="226" selection-end-column="121" />
+          <folding>
+            <element signature="e#52#97#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Controller/TechnologyController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80091536" vertical-offset="2292" max-vertical-offset="3179">
-          <caret line="224" column="121" selection-start-line="224" selection-start-column="38" selection-end-line="224" selection-end-column="121" />
+        <state vertical-scroll-proportion="0.7860412" vertical-offset="2305" max-vertical-offset="3179">
+          <caret line="224" column="121" selection-start-line="224" selection-start-column="28" selection-end-line="224" selection-end-column="121" />
           <folding>
             <element signature="e#4615#5500#0#PHP" expanded="false" />
             <element signature="e#5564#6161#0#PHP" expanded="false" />
@@ -1197,37 +942,175 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Controller/SubscriptionController.php">
+    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Formation/_published.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.4615383" vertical-offset="3104" max-vertical-offset="3978">
-          <caret line="194" column="39" selection-start-line="194" selection-start-column="39" selection-end-line="194" selection-end-column="39" />
+        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="170">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formation/FrontBundle/Entity/Formation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-75.84615" vertical-offset="0" max-vertical-offset="8245">
+          <caret line="118" column="25" selection-start-line="118" selection-start-column="25" selection-end-line="118" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Form/FormationType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="1173">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formation/FrontBundle/Entity/LevelTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6407323" vertical-offset="273" max-vertical-offset="1173">
+          <caret line="49" column="6" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
           <folding>
-            <element signature="e#52#97#0#PHP" expanded="true" />
+            <element signature="e#48#100#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Subscription/new.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Subscription/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.423077" vertical-offset="248" max-vertical-offset="1462">
-          <caret line="29" column="92" selection-start-line="29" selection-start-column="85" selection-end-line="29" selection-end-column="92" />
+        <state vertical-scroll-proportion="0.42791763" vertical-offset="0" max-vertical-offset="874">
+          <caret line="22" column="157" selection-start-line="22" selection-start-column="157" selection-end-line="22" selection-end-column="157" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Level/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3112128" vertical-offset="0" max-vertical-offset="918">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="45" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Controller/SessionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-26.423077" vertical-offset="2968" max-vertical-offset="3842">
+          <caret line="219" column="121" selection-start-line="219" selection-start-column="121" selection-end-line="219" selection-end-column="121" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formation/FrontBundle/Entity/FormationTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.423077" vertical-offset="1000" max-vertical-offset="2057">
+          <caret line="92" column="99" selection-start-line="92" selection-start-column="99" selection-end-line="92" selection-end-column="99" />
+          <folding>
+            <element signature="e#133#185#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Formation/_subscriptions.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="887">
+          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Formation/_technologies.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05749718" vertical-offset="0" max-vertical-offset="887">
+          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Form/SubscriptionType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.0" vertical-offset="116" max-vertical-offset="1207">
-          <caret line="44" column="23" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.8466742" vertical-offset="116" max-vertical-offset="1207">
+          <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.7557502" vertical-offset="0" max-vertical-offset="3383">
-          <caret line="148" column="12" selection-start-line="148" selection-start-column="0" selection-end-line="164" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.24915445" vertical-offset="153" max-vertical-offset="1360">
+          <caret line="22" column="38" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="38" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Formation/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="913">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Level/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="913">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Subscription/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="913">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Subscription/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-33.615383" vertical-offset="44" max-vertical-offset="1462">
+          <caret line="54" column="102" selection-start-line="54" selection-start-column="102" selection-end-line="54" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Formation/delete.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="476">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Formation/_dataTables_action.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="340">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Resources/views/Formation/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-28.76923" vertical-offset="0" max-vertical-offset="884">
+          <caret line="44" column="10" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Formation/AdminBundle/Controller/FormationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.67080045" vertical-offset="17" max-vertical-offset="2890">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="e#1396#2020#0#PHP" expanded="false" />
+            <element signature="e#2204#2592#0#PHP" expanded="false" />
+            <element signature="e#2678#2979#0#PHP" expanded="false" />
+            <element signature="e#3054#3597#0#PHP" expanded="false" />
+            <element signature="e#4512#4932#0#PHP" expanded="false" />
+            <element signature="e#5003#5884#0#PHP" expanded="false" />
+            <element signature="e#7406#7772#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

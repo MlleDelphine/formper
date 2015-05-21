@@ -1,0 +1,8 @@
+<div class="tagsinput">
+{% for techno in technologies %}
+    <span class="tag">{{ techno.name }}</span>
+    {% if loop.index is divisible by(3) %}
+        <br><br>
+    {% endif %}
+{% endfor %}
+</div>
