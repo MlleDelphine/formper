@@ -2,6 +2,8 @@
 
 namespace Formation\AdminBundle\Form;
 
+use Formation\AdminBundle\Form\Type\BooleanType;
+use Formation\AdminBundle\Form\Type\EuroType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
@@ -16,10 +18,15 @@ class FormationType extends AbstractType
     {
         $builder
             ->add('name', 'text', array('label' => 'Nom :'))
-            ->add('shortDescription')
-            ->add('longDescription')
-            ->add('price')
-            ->add('published', null, array('required' => false))
+            ->add('shortDescription', 'genemu_tinymce', array(
+                'required' => true,
+                'label' => 'Description courte'))
+            ->add('longDescription', 'genemu_tinymce', array(
+                'required' => true,
+                'label' => 'Description complète'))
+            ->add('price', new EuroType(), array('label' => 'Prix :'))
+            ->add('published', new BooleanType(), array('label' => 'Publié',
+                'required' => false))
             ->add('teacher', 'genemu_jqueryselect2_entity', array(
                 'class' => 'FormationFrontBundle:Teacher',
                 'property' => 'name',
@@ -33,7 +40,8 @@ class FormationType extends AbstractType
                 'property' => 'name',
                 'label' => 'Niveau',
                 'multiple' => false,
-                'placeholder' => 'Sélectionner'
+                'placeholder' => 'Sélectionner',
+                'required' => true
             ))
             ->add('technologies',  'genemu_jqueryselect2_entity', array(
                 'class' => 'FormationFrontBundle:Technology',
@@ -42,9 +50,15 @@ class FormationType extends AbstractType
                 'multiple' => true,
                 'placeholder' => 'Sélectionner'
             ))
+            ->add('requirements', 'collection', array(
+                'type' => new RequirementType(),
+                'allow_add' => true,
+                'allow_delete' => true,
+                'by_reference' => false,
+            ))
         ;
     }
-    
+
     /**
      * @param OptionsResolverInterface $resolver
      */

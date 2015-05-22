@@ -15,9 +15,24 @@ class RequirementType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('formation')
-            ->add('technology')
-            ->add('level')
+//            ->add('formation','genemu_jqueryselect2_entity', array(
+//                'class' => 'FormationFrontBundle:Formation',
+//                'property' => 'name',
+//                'label' => 'Formation',
+//                'multiple' => false,
+//                'placeholder' => 'Sélectionner'))
+            ->add('technology','genemu_jqueryselect2_entity', array(
+                'class' => 'FormationFrontBundle:Technology',
+                'property' => 'name',
+                'label' => 'Technologie',
+                'multiple' => false,
+                'placeholder' => 'Sélectionner'))
+            ->add('level','genemu_jqueryselect2_entity', array(
+                'class' => 'FormationFrontBundle:Level',
+                'property' => 'name',
+                'label' => 'Niveau',
+                'multiple' => false,
+                'placeholder' => 'Sélectionner'))
         ;
     }
     

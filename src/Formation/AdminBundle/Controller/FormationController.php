@@ -7,6 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Formation\FrontBundle\Entity\Formation;
 use Formation\AdminBundle\Form\FormationType;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Formation controller.
@@ -39,9 +40,9 @@ class FormationController extends Controller
 //
 //        $deleteForm = $this->createDeleteForm($id);
 
-
         return $this->render('FormationAdminBundle:Formation:index.html.twig', array(
             'dataTable' => $dataTable,
+//            'objects' => $dataTable
 //            'entity'      => $entity,
 //            'form'   => $deleteForm->createView(),
         ));
@@ -151,12 +152,12 @@ class FormationController extends Controller
     }
 
     /**
-    * Creates a form to edit a Formation entity.
-    *
-    * @param Formation $entity The entity
-    *
-    * @return \Symfony\Component\Form\Form The form
-    */
+     * Creates a form to edit a Formation entity.
+     *
+     * @param Formation $entity The entity
+     *
+     * @return \Symfony\Component\Form\Form The form
+     */
     private function createEditForm(Formation $entity)
     {
         $form = $this->createForm(new FormationType(), $entity, array(
@@ -182,14 +183,36 @@ class FormationController extends Controller
             throw $this->createNotFoundException('Unable to find Formation entity.');
         }
 
+        //Gestion des prérequis supprimés
+        $originalRequirements = new ArrayCollection();
+
+        // Crée un tableau contenant les objets Requirement courants de la
+        // base de données
+        foreach ($entity->getRequirements() as $requirement) {
+            $originalRequirements->add($requirement);
+        }
+
+
         $deleteForm = $this->createDeleteForm($id);
         $editForm = $this->createEditForm($entity);
         $editForm->handleRequest($request);
 
-        if ($editForm->isValid()) {
-            $em->flush();
+        if ($request->isMethod('POST')) {
 
-            return $this->redirect($this->generateUrl('formation_edit', array('id' => $id)));
+            if ($editForm->isValid()) {
+                // supprime la relation entre le requirement et la « Formation »
+                foreach ($originalRequirements as $requirement) {
+                    if ($entity->getRequirements()->contains($requirement) == false) {
+                        // supprime la « Formation » du Requirement
+                        $requirement->setFormation(null);
+
+                        $em->remove($requirement);
+                    }
+                }
+
+                $em->persist($entity);
+                $em->flush();
+            }
         }
 
         return $this->render('FormationAdminBundle:Formation:edit.html.twig', array(
@@ -218,6 +241,7 @@ class FormationController extends Controller
             $em->remove($entity);
             $em->flush();
         }
+
 
         return $this->redirect($this->generateUrl('formation'));
     }
@@ -259,6 +283,6 @@ class FormationController extends Controller
             ->setMethod('DELETE')
             ->add('submit', 'submit', array('label' => 'Supprimer', 'attr' => array('class' => 'btn btn-sm btn-danger')))
             ->getForm()
-        ;
+            ;
     }
 }

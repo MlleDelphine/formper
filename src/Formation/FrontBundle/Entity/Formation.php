@@ -82,7 +82,7 @@ class Formation
     private $sessions;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Formation\FrontBundle\Entity\Technology", inversedBy="formations")
+     * @ORM\ManyToMany(targetEntity="Formation\FrontBundle\Entity\Technology", inversedBy="formations", cascade={"remove"})
      * @ORM\JoinTable(name="formations_technologies")
      */
     private $technologies;
@@ -389,6 +389,7 @@ class Formation
     public function addRequirement(\Formation\FrontBundle\Entity\Requirement $requirements)
     {
         $this->requirements[] = $requirements;
+        $requirements->setFormation($this);
 
         return $this;
     }
