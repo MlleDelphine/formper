@@ -26,13 +26,16 @@ class RequirementType extends AbstractType
                 'property' => 'name',
                 'label' => 'Technologie',
                 'multiple' => false,
-                'placeholder' => 'Sélectionner'))
+                'placeholder' => 'Sélectionner',
+                'required' => false
+                ))
             ->add('level','genemu_jqueryselect2_entity', array(
                 'class' => 'FormationFrontBundle:Level',
                 'property' => 'name',
                 'label' => 'Niveau',
                 'multiple' => false,
-                'placeholder' => 'Sélectionner'))
+                'placeholder' => 'Sélectionner',
+                'required' => false))
         ;
     }
     

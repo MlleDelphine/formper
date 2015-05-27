@@ -30,16 +30,6 @@ class FormationController extends Controller
             return $response;
         }
 
-//        $em = $this->getDoctrine()->getManager();
-//
-//        $entity = $em->getRepository('FormationFrontBundle:Formation')->find($id);
-//
-//        if (!$entity) {
-//            throw $this->createNotFoundException('Unable to find Formation entity.');
-//        }
-//
-//        $deleteForm = $this->createDeleteForm($id);
-
         return $this->render('FormationAdminBundle:Formation:index.html.twig', array(
             'dataTable' => $dataTable,
 //            'objects' => $dataTable
@@ -166,9 +156,12 @@ class FormationController extends Controller
         ));
 
         $form->add('submit', 'submit', array('label' => 'Valider', 'attr' => array('class' => 'btn btn-sm btn-primary')));
+        $form->add('save', 'submit', array('label' => 'Valider', 'attr' => array('class' => 'btn btn-sm btn-primary')));
+        $form->add('saveagain', 'submit', array('label' => 'Valider', 'attr' => array('class' => 'btn btn-sm btn-primary')));
 
         return $form;
     }
+
     /**
      * Edits an existing Formation entity.
      *
@@ -192,24 +185,21 @@ class FormationController extends Controller
             $originalRequirements->add($requirement);
         }
 
-
         $deleteForm = $this->createDeleteForm($id);
         $editForm = $this->createEditForm($entity);
-        $editForm->handleRequest($request);
 
+        // $editForm->handleRequest($request);
         if ($request->isMethod('POST')) {
-
+            $editForm->submit($request->request->get($editForm->getName()));
             if ($editForm->isValid()) {
                 // supprime la relation entre le requirement et la « Formation »
                 foreach ($originalRequirements as $requirement) {
                     if ($entity->getRequirements()->contains($requirement) == false) {
                         // supprime la « Formation » du Requirement
                         $requirement->setFormation(null);
-
                         $em->remove($requirement);
                     }
                 }
-
                 $em->persist($entity);
                 $em->flush();
             }

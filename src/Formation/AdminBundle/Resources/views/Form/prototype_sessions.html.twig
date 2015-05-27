@@ -1,0 +1,32 @@
+<div class="session-all-element">
+    <div class="col-md-3 session-element">
+        {{ form_label(form.name, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+        <div class="col-md-9">
+            {{ form_widget(form.name, { 'attr': {'class': 'form-control'} } ) }}
+        </div>
+    </div>
+    <div class="col-md-3 session-element">
+        {{ form_label(form.places, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+        <div class="col-md-9">
+            {{ form_widget(form.places, { 'attr': {'class': 'form-control'} }) }}
+        </div>
+    </div>
+    <div class="col-md-3 session-element">
+        {{ form_label(form.status, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+        <div class="col-md-9">
+            {{ form_widget(form.status, { 'attr': {'class': 'select-select2', 'style': 'width: 100%'} }) }}
+        </div>
+    </div>
+    <div class="col-md-9 sessiondates" data-prototype="">
+        {%  for date in form.sessionDates %}
+        <div class="sessiondate-all-element">
+        <div class="col-md-3 sessiondate-element">
+            <div class="col-md-9">
+                {{ form_widget(date.date_start, { 'attr': {'class': 'form-control'} } ) }}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+</div>

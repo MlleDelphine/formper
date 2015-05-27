@@ -14,3 +14,19 @@
         </div>
     {% endspaceless %}
 {% endblock %}
+
+{% block horizontalSlider_widget %}
+    {% spaceless %}
+
+        {{ form_widget(form, { 'attr': {'class': 'form-control input-slider',
+            'data-slider-min': 0,
+            'data-slider-max': 100,
+            'sata-slider-step': 1,
+            'data-slider-orientation': 'horizontal',
+            'data-slider-selection': 'before',
+            'data-slider-tooltip': 'show'
+
+        }} ) }}
+
+    {% endspaceless %}
+{% endblock %}

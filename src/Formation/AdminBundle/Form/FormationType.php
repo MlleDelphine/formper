@@ -48,13 +48,22 @@ class FormationType extends AbstractType
                 'property' => 'name',
                 'label' => 'Technologies concernées',
                 'multiple' => true,
-                'placeholder' => 'Sélectionner'
+                'placeholder' => 'Sélectionner',
+                'required' => false
             ))
             ->add('requirements', 'collection', array(
                 'type' => new RequirementType(),
                 'allow_add' => true,
                 'allow_delete' => true,
                 'by_reference' => false,
+                'required' => false
+            ))
+            ->add('sessions', 'collection', array(
+                'type' => new SessionType(),
+                'allow_add' => true,
+                'allow_delete' => true,
+                'by_reference' => false,
+                'required' => false
             ))
         ;
     }

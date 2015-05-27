@@ -2,6 +2,7 @@
 
 namespace Formation\FrontBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -66,7 +67,7 @@ class Formation
 
     /**
      * @ORM\ManyToOne(targetEntity="Formation\FrontBundle\Entity\Teacher", inversedBy="formations", cascade={"persist"})
-     * @ORM\JoinColumn(name="teacher_id", referencedColumnName="id", onDelete="SET NULL")
+     * @ORM\JoinColumn(name="teacher_id", referencedColumnName="id", onDelete="SET NULL", nullable=true)
      */
     private $teacher;
 
@@ -82,7 +83,7 @@ class Formation
     private $sessions;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Formation\FrontBundle\Entity\Technology", inversedBy="formations", cascade={"remove"})
+     * @ORM\ManyToMany(targetEntity="Formation\FrontBundle\Entity\Technology", inversedBy="formations", cascade={"persist"})
      * @ORM\JoinTable(name="formations_technologies")
      */
     private $technologies;
@@ -361,6 +362,21 @@ class Formation
     }
 
     /**
+     * Set technologies
+     *
+     * @param \Formation\FrontBundle\Entity\Technology $technologies
+     * @return Formation
+     */
+    public function setTechnologies(ArrayCollection $technologies)
+    {
+        foreach ($technologies as $technology) {
+            $technology->addFormation($this);
+        }
+
+        $this->technologies = $technologies;
+    }
+
+    /**
      * Remove technologies
      *
      * @param \Formation\FrontBundle\Entity\Technology $technologies
@@ -388,10 +404,25 @@ class Formation
      */
     public function addRequirement(\Formation\FrontBundle\Entity\Requirement $requirements)
     {
-        $this->requirements[] = $requirements;
         $requirements->setFormation($this);
+        $this->requirements[] = $requirements;
 
         return $this;
+    }
+
+    /**
+     * Set requirements
+     *
+     * @param \Formation\FrontBundle\Entity\Requirement $requirements
+     * @return Formation
+     */
+    public function setRequirements(ArrayCollection $requirements)
+    {
+        foreach ($requirements as $requirement) {
+            $requirement->setFormation($this);
+        }
+
+        $this->requirements = $requirements;
     }
 
     /**

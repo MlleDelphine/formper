@@ -1,0 +1,14 @@
+<div class="requirement-all-element">
+    <div class="col-md-5 requirement-element">
+        {{ form_label(form.technology, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+        <div class="col-md-9">
+            {{ form_widget(form.technology, { 'attr': {'class': 'select-select2 select-chosen', 'style': 'width: 100%'} } ) }}
+        </div>
+    </div>
+    <div class="col-md-5 requirement-element">
+        {{ form_label(form.level, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+        <div class="col-md-9">
+            {{ form_widget(form.level, { 'attr': {'class': 'select-select2 select-chosen', 'style': 'width: 100%'} }) }}
+        </div>
+    </div>
+</div>

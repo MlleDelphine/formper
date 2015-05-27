@@ -23,13 +23,13 @@ class Requirement
 
     /**
      * @ORM\ManyToOne(targetEntity="Formation\FrontBundle\Entity\Formation", inversedBy="requirements", cascade={"persist"})
-     * @ORM\JoinColumn(name="formation_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="formation_id", referencedColumnName="id", )
      */
     private $formation;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Formation\FrontBundle\Entity\Technology", inversedBy="requirements", cascade={"persist", "remove"})
-     * @ORM\JoinColumn(name="technology_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Formation\FrontBundle\Entity\Technology", inversedBy="requirements", cascade={"persist"})
+     * @ORM\JoinColumn(name="technology_id", referencedColumnName="id", onDelete="SET NULL")
      */
     private $technology;
 

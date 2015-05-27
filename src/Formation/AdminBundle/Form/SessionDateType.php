@@ -19,7 +19,6 @@ class SessionDateType extends AbstractType
             ->add('dateEnd')
             ->add('timeStart')
             ->add('timeEnd')
-            ->add('session')
         ;
     }
     
