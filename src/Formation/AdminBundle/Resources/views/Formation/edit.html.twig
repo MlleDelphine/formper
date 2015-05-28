@@ -6,9 +6,10 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    {% if form is defined %}
+    {% if edit_form is defined %}
         <link rel="stylesheet" href="{{ asset('bundles/adminbundle/js/select2-4.0.0/css/select2.min.css') }}">
-        {{ form_stylesheet(form) }}
+        <link rel="stylesheet" href="{{ asset('bundles/adminbundle/css/forms.css') }}">
+        {{ form_stylesheet(edit_form) }}
     {% endif %}
 {% endblock %}
 
@@ -149,17 +150,51 @@
              {{ include('FormationAdminBundle:Form:prototype_sessions.html.twig', { 'form': edit_form.sessions.vars.prototype|e }) }}         {% endfilter %}">
                                     {%  for session in edit_form.sessions %}
                                         <div class="session-all-element">
-                                            <div class="col-md-5 session-element">
+                                            <div class="col-md-4 session-element">
                                                 {{ form_label(session.name, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
                                                 <div class="col-md-9">
                                                     {{ form_widget(session.name, { 'attr': {'class': 'form-control'} } ) }}
                                                 </div>
                                             </div>
-                                            <div class="col-md-5 session-element">
+                                            <div class="col-md-4 session-element">
                                                 {{ form_label(session.places, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
                                                 <div class="col-md-9">
                                                     {{ form_widget(session.places, { 'attr': {'class': 'form-control'} }) }}
                                                 </div>
+                                            </div>
+                                            <div class="col-md-4 session-element">
+                                                {{ form_label(session.status, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+                                                <div class="col-md-9">
+                                                    {{ form_widget(session.status, { 'attr': {'class': 'select-select2 select-chosen', 'style': 'width: 100%'} }) }}
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 sessiondates" data-prototype="{% filter escape %}
+             {{ include('FormationAdminBundle:Form:prototype_sessiondate.html.twig', { 'form': session.sessionDates.vars.prototype|e }) }}         {% endfilter %}">
+                                                {%  for date in session.sessionDates %}
+                                                    <div class="sessiondate-all-element">
+                                                        <div class="col-md-3 sessiondate-element">
+                                                            <div class="col-md-9">
+                                                                {{ form_widget(date.date_start, { 'attr': {'class': 'form-control'} } ) }}
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3 sessiondate-element">
+                                                            <div class="col-md-9">
+                                                                {{ form_widget(date.time_start, { 'attr': {'class': 'form-control'} } ) }}
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3 sessiondate-element">
+                                                            <div class="col-md-9">
+                                                                {{ form_widget(date.date_end, { 'attr': {'class': 'form-control'} } ) }}
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3 sessiondate-element">
+                                                            <div class="col-md-9">
+                                                                {{ form_widget(date.time_end, { 'attr': {'class': 'form-control'} } ) }}
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                {% endfor %}
                                             </div>
                                         </div>
                                     {% endfor %}

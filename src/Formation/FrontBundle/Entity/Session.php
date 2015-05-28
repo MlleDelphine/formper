@@ -4,6 +4,7 @@ namespace Formation\FrontBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Symfony\Component\Validator\Constraints\DateTime;
 
 /**
  * Session
@@ -195,6 +196,7 @@ class Session
     {
         $this->subscriptions = new \Doctrine\Common\Collections\ArrayCollection();
         $this->sessionDates = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->created = new \DateTime();
     }
 
 

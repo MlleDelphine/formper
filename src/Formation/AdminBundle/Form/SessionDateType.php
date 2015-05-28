@@ -15,10 +15,16 @@ class SessionDateType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('dateStart')
-            ->add('dateEnd')
-            ->add('timeStart')
-            ->add('timeEnd')
+            ->add('dateStart', 'date', array(
+                'widget' => 'single_text',
+                'input' => 'datetime',
+                'format' => 'dd/MM/yyyy'))
+            ->add('dateEnd', 'text', array(
+                'widget' => 'single_text',
+                'input' => 'datetime',
+                'format' => 'dd/MM/yyyy'))
+            ->add('timeStart', 'text', array('label' => 'Heure de départ'))
+            ->add('timeEnd', 'text', array('label' => 'Heure de fin'))
         ;
     }
     
