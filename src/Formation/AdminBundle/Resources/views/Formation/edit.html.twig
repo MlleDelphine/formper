@@ -9,6 +9,7 @@
     {% if edit_form is defined %}
         <link rel="stylesheet" href="{{ asset('bundles/adminbundle/js/select2-4.0.0/css/select2.min.css') }}">
         <link rel="stylesheet" href="{{ asset('bundles/adminbundle/css/forms.css') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/adminbundle/js/datetimepicker/jquery.datetimepicker.css') }}">
         {{ form_stylesheet(edit_form) }}
     {% endif %}
 {% endblock %}
@@ -165,7 +166,7 @@
                                             <div class="col-md-4 session-element">
                                                 {{ form_label(session.status, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
                                                 <div class="col-md-9">
-                                                    {{ form_widget(session.status, { 'attr': {'class': 'select-select2 select-chosen', 'style': 'width: 100%'} }) }}
+                                                    {{ form_widget(session.status, { 'attr': {'class': 'select-select2', 'style': 'width: 100%'} }) }}
                                                 </div>
                                             </div>
                                             <div class="col-md-12 sessiondates" data-prototype="{% filter escape %}
@@ -173,23 +174,27 @@
                                                 {%  for date in session.sessionDates %}
                                                     <div class="sessiondate-all-element">
                                                         <div class="col-md-3 sessiondate-element">
+                                                            {{ form_label(date.dateStart, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
                                                             <div class="col-md-9">
-                                                                {{ form_widget(date.date_start, { 'attr': {'class': 'form-control'} } ) }}
+                                                                {{ form_widget(date.dateStart, { 'attr': {'class': 'form-control date-session'} } ) }}
                                                             </div>
                                                         </div>
                                                         <div class="col-md-3 sessiondate-element">
+                                                            {{ form_label(date.timeStart, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
                                                             <div class="col-md-9">
-                                                                {{ form_widget(date.time_start, { 'attr': {'class': 'form-control'} } ) }}
+                                                                {{ form_widget(date.timeStart, { 'attr': {'class': 'form-control time-session'} } ) }}
                                                             </div>
                                                         </div>
                                                         <div class="col-md-3 sessiondate-element">
+                                                            {{ form_label(date.dateEnd, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
                                                             <div class="col-md-9">
-                                                                {{ form_widget(date.date_end, { 'attr': {'class': 'form-control'} } ) }}
+                                                                {{ form_widget(date.dateEnd, { 'attr': {'class': 'form-control date-session'} } ) }}
                                                             </div>
                                                         </div>
                                                         <div class="col-md-3 sessiondate-element">
+                                                            {{ form_label(date.timeEnd, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
                                                             <div class="col-md-9">
-                                                                {{ form_widget(date.time_end, { 'attr': {'class': 'form-control'} } ) }}
+                                                                {{ form_widget(date.timeEnd, { 'attr': {'class': 'form-control time-session'} } ) }}
                                                             </div>
                                                         </div>
 
@@ -200,8 +205,10 @@
                                     {% endfor %}
                                 </div>
                             </div>
-                            <div class="col-md-3 col-md-offset-3">
-                                {{ form_widget(edit_form.save) }}
+                            <div class="form-group form-actions">
+                                <div class="col-md-3 col-md-offset-3">
+                                    {{ form_widget(edit_form.saveagain) }}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -219,114 +226,13 @@
             {{ form_end(delete_form) }}
         </div>
     </div>
-
-    {#<div class="col-md-12">#}
-    {#<div class="block">#}
-    {#<div class="block-title">#}
-    {#<div class="block-options pull-right">#}
-    {#<a href="{{ path('formation') }}" class="btn btn-alt btn-sm btn-default toggle-bordered enable-tooltip" data-toggle="button" title="Retourner à la liste">Retour</a>#}
-    {#</div>#}
-    {#<h2>Edition d'une formation</h2>#}
-    {#</div>#}
-
-    {#<form class="form-horizontal form-bordered" action="{{ path('formation_update', {'id': entity.id}) }}" method="post" {{ form_enctype(edit_form) }}>#}
-    {#<div class="form-group">#}
-    {#{{ form_label(edit_form.name, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}#}
-    {#<div class="col-md-9">#}
-    {#{{ form_widget(edit_form.name, { 'attr': {'class': 'form-control'} }) }}#}
-    {#</div>#}
-    {#</div>#}
-    {#<div class="form-group">#}
-    {#{{ form_label(edit_form.shortDescription, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}#}
-    {#<div class="col-md-9">#}
-    {#{{ form_widget(edit_form.shortDescription, { 'attr': {'class': 'form-control'} }) }}#}
-    {#</div>#}
-    {#</div>#}
-    {#<div class="form-group">#}
-    {#{{ form_label(edit_form.longDescription, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}#}
-    {#<div class="col-md-9">#}
-    {#{{ form_widget(edit_form.longDescription, { 'attr': {'class': ''} }) }}#}
-    {#</div>#}
-    {#</div>#}
-    {#<div class="form-group">#}
-    {#{{ form_label(edit_form.price, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}#}
-    {#<div class="col-md-9">#}
-    {#{{ form_widget(edit_form.price) }}#}
-    {#</div>#}
-    {#</div>#}
-    {#<div class="form-group">#}
-    {#{{ form_label(edit_form.published, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}#}
-    {#<div class="col-md-9">#}
-    {#{{ form_widget(edit_form.published, { 'attr': {'class': 'form-control'} }) }}#}
-    {#</div>#}
-    {#</div>#}
-    {#<div class="form-group">#}
-    {#{{ form_label(edit_form.teacher, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}#}
-    {#<div class="col-md-9">#}
-    {#{{ form_widget(edit_form.teacher, { 'attr': {'class': 'select-select2', 'style': 'width: 100%'} }) }}#}
-    {#</div>#}
-    {#</div>#}
-    {#<div class="form-group">#}
-    {#{{ form_label(edit_form.level, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}#}
-    {#<div class="col-md-9">#}
-    {#{{ form_widget(edit_form.level, { 'attr': {'class': 'select-select2', 'style': 'width: 100%' } }) }}#}
-    {#</div>#}
-    {#</div>#}
-    {#<div class="form-group">#}
-    {#{{ form_label(edit_form.technologies, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}#}
-    {#<div class="col-md-9">#}
-    {#{{ form_widget(edit_form.technologies, { 'attr': {'class': 'select-select2', 'style': 'width: 100%'} }) }}#}
-    {#</div>#}
-    {#</div>#}
-    {#&#123;&#35; Prérequis  &#35;&#125;#}
-    {#<div class="form-group">#}
-    {#<label class="col-md-3 control-label">Prérequis</label>#}
-    {#<div class="col-md-9 requirements" data-prototype="        {% filter escape %}#}
-    {#{{ include('FormationAdminBundle:Form:prototype_requirements.html.twig', { 'form': edit_form.requirements.vars.prototype|e }) }}#}
-    {#{% endfilter %}">#}
-    {#{%  for requirement in edit_form.requirements %}#}
-    {#<div class="requirement-all-element">#}
-    {#<div class="col-md-5 requirement-element">#}
-    {#{{ form_label(requirement.technology, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}#}
-    {#<div class="col-md-9">#}
-    {#{{ form_widget(requirement.technology, { 'attr': {'class': 'select-select2', 'style': 'width: 100%'} } ) }}#}
-    {#</div>#}
-    {#</div>#}
-    {#<div class="col-md-5 requirement-element">#}
-    {#{{ form_label(requirement.level, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}#}
-    {#<div class="col-md-9">#}
-    {#{{ form_widget(requirement.level, { 'attr': {'class': 'select-select2', 'style': 'width: 100%'} }) }}#}
-    {#</div>#}
-    {#</div>#}
-    {#</div>#}
-    {#{% endfor %}#}
-    {#</div>#}
-    {#</div>#}
-    {#<div class="form-group form-actions">#}
-    {#<div class="col-md-3 col-md-offset-3">#}
-    {#{{ form_widget(edit_form.submit) }}#}
-    {#</div>#}
-    {#</div>#}
-    {#{{ form_widget(edit_form._token) }}#}
-    {#</form>#}
-    {#</div>#}
-
-    {#<div class="block">#}
-    {#{{  form_start(delete_form, { 'attr': {'class': 'form-horizontal form-bordered'}}) }}#}
-    {#<div class="form-group form-actions">#}
-    {#<div class="col-md-1 col-md-offset-11">#}
-    {#{{ form_widget(delete_form.submit) }}#}
-    {#</div>#}
-    {#</div>#}
-    {#{{ form_end(delete_form) }}#}
-    {#</div>#}
-    {#</div>#}
 {% endblock %}
 {% block scripts %}
     {{ parent() }}
     {% if edit_form is defined %}
         <script src="{{ asset('bundles/adminbundle/js/tinymce/tinymce.min.js') }}"></script>
         <script src="{{ asset('bundles/adminbundle/js/custom/dynamic_fields.js') }}"></script>
+        <script src="{{ asset('bundles/adminbundle/js/datetimepicker/jquery.datetimepicker.js') }}"></script>
         {{ form_javascript(edit_form) }}
     {% endif %}
 {% endblock %}

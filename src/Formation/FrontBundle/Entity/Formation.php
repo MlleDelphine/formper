@@ -285,7 +285,7 @@ class Formation
     /**
      * Get published
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getPublished()
     {
@@ -308,7 +308,7 @@ class Formation
     /**
      * Get level
      *
-     * @return \Formation\FrontBundle\Entity\Level 
+     * @return \Formation\FrontBundle\Entity\Level
      */
     public function getLevel()
     {
@@ -323,6 +323,7 @@ class Formation
      */
     public function addSession(\Formation\FrontBundle\Entity\Session $sessions)
     {
+        $sessions->setFormation($this);
         $this->sessions[] = $sessions;
 
         return $this;
@@ -341,7 +342,7 @@ class Formation
     /**
      * Get sessions
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getSessions()
     {
@@ -389,7 +390,7 @@ class Formation
     /**
      * Get technologies
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getTechnologies()
     {
@@ -438,7 +439,7 @@ class Formation
     /**
      * Get requirements
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getRequirements()
     {
@@ -471,7 +472,7 @@ class Formation
     /**
      * Get documents
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getDocuments()
     {
@@ -504,7 +505,7 @@ class Formation
     /**
      * Get subscriptions
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getSubscriptions()
     {

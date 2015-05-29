@@ -2,13 +2,13 @@
     <div class="col-md-3 sessiondate-element">
         {{ form_label(form.dateStart, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
         <div class="col-md-9">
-            {{ form_widget(form.dateStart, { 'attr': {'class': 'form-control date-session time-session'} } ) }}
+            {{ form_widget(form.dateStart, { 'attr': {'class': 'form-control date-session'} } ) }}
         </div>
     </div>
     <div class="col-md-3 sessiondate-element">
         {{ form_label(form.timeStart, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
         <div class="col-md-9">
-            {{ form_widget(form.timeStart, { 'attr': {'class': 'form-control'} } ) }}
+            {{ form_widget(form.timeStart, { 'attr': {'class': 'form-control time-session'} } ) }}
         </div>
     </div>
     <div class="col-md-3 sessiondate-element">

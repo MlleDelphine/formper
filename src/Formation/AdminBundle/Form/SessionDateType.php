@@ -19,12 +19,16 @@ class SessionDateType extends AbstractType
                 'widget' => 'single_text',
                 'input' => 'datetime',
                 'format' => 'dd/MM/yyyy'))
-            ->add('dateEnd', 'text', array(
+            ->add('dateEnd', 'date', array(
                 'widget' => 'single_text',
                 'input' => 'datetime',
                 'format' => 'dd/MM/yyyy'))
-            ->add('timeStart', 'text', array('label' => 'Heure de départ'))
-            ->add('timeEnd', 'text', array('label' => 'Heure de fin'))
+            ->add('timeStart', 'time', array('label' => 'Heure de départ',
+                'widget' => 'single_text',
+                'input' => 'datetime'))
+            ->add('timeEnd', 'time', array('label' => 'Heure de fin',
+                'widget' => 'single_text',
+                'input' => 'datetime'))
         ;
     }
     
@@ -43,6 +47,6 @@ class SessionDateType extends AbstractType
      */
     public function getName()
     {
-        return 'formation_frontbundle_sessiondate';
+        return 'formation_adminbundle_sessiondate';
     }
 }

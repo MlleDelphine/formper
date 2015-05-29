@@ -59,7 +59,7 @@ class Session
     private $updated;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Formation\FrontBundle\Entity\Formation", inversedBy="sessions", cascade={"persist", "remove"})
+     * @ORM\ManyToOne(targetEntity="Formation\FrontBundle\Entity\Formation", inversedBy="sessions")
      */
     private $formation;
 
@@ -75,7 +75,7 @@ class Session
     private $status;
 
     /**
-     * @ORM\OneToMany(targetEntity="Formation\FrontBundle\Entity\SessionDate", mappedBy="session", cascade={"all"})
+     * @ORM\OneToMany(targetEntity="Formation\FrontBundle\Entity\SessionDate", mappedBy="session", cascade={"persist", "remove"})
      */
     private $sessionDates;
 
@@ -315,6 +315,7 @@ class Session
      */
     public function addSessionDate(\Formation\FrontBundle\Entity\SessionDate $sessionDates)
     {
+        $sessionDates->setSession($this);
         $this->sessionDates[] = $sessionDates;
 
         return $this;

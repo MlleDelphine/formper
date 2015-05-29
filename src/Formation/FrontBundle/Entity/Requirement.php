@@ -29,13 +29,13 @@ class Requirement
 
     /**
      * @ORM\ManyToOne(targetEntity="Formation\FrontBundle\Entity\Technology", inversedBy="requirements", cascade={"persist"})
-     * @ORM\JoinColumn(name="technology_id", referencedColumnName="id", onDelete="SET NULL")
+     * @ORM\JoinColumn(name="technology_id", referencedColumnName="id", onDelete="CASCADE")
      */
     private $technology;
 
     /**
      * @ORM\ManyToOne(targetEntity="Formation\FrontBundle\Entity\Level", inversedBy="requirements", cascade={"persist"})
-     * @ORM\JoinColumn(name="level_id", referencedColumnName="id", onDelete="SET NULL")
+     * @ORM\JoinColumn(name="level_id", referencedColumnName="id", onDelete="CASCADE")
      */
     private $level;
 

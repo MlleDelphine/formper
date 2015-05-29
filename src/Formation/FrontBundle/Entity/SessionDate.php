@@ -52,8 +52,7 @@ class SessionDate
     private $timeEnd;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Formation\FrontBundle\Entity\Session", inversedBy="sessionDates", cascade={"persist", "remove"})
-     * @ORM\JoinColumn(name="session_id", referencedColumnName="id", onDelete="CASCADE")
+     * @ORM\ManyToOne(targetEntity="Formation\FrontBundle\Entity\Session", inversedBy="sessionDates")
      */
     private $session;
 

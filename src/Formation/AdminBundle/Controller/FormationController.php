@@ -176,13 +176,23 @@ class FormationController extends Controller
             throw $this->createNotFoundException('Unable to find Formation entity.');
         }
 
-        //Gestion des prérequis supprimés
+        //Gestion des prérequis / sessions /sessionDate supprimés
         $originalRequirements = new ArrayCollection();
+        $originalSessions = new ArrayCollection();
+        $originalSessionDates = new ArrayCollection();
 
         // Crée un tableau contenant les objets Requirement courants de la
         // base de données
         foreach ($entity->getRequirements() as $requirement) {
             $originalRequirements->add($requirement);
+        }
+        // Crée un tableau contenant les objets Session courants de la
+        // base de données
+        foreach ($entity->getSessions() as $session) {
+            $originalSessions->add($session);
+            foreach($session->getSessionDates() as $date){
+                $originalSessionDates->add($date);
+            }
         }
 
         $deleteForm = $this->createDeleteForm($id);
@@ -198,6 +208,23 @@ class FormationController extends Controller
                         // supprime la « Formation » du Requirement
                         $requirement->setFormation(null);
                         $em->remove($requirement);
+                    }
+                }
+                // supprime la relation entre la Session et la « Formation »
+                foreach ($originalSessions as $session) {
+                    if ($entity->getSessions()->contains($session) == false) {
+                        // supprime la « Session » de la SessionDate
+                        $session->setFormation(null);
+                        $em->remove($session);
+                    }
+                    else{
+                        foreach ($originalSessionDates as $date) {
+                            if ($session->getSessionDates()->contains($date) == false) {
+                                // supprime la « SessionDate » de la Session
+                                $date->setSession(null);
+                                $em->remove($date);
+                            }
+                        }
                     }
                 }
                 $em->persist($entity);
