@@ -27,13 +27,13 @@ class SessionStatusTable extends AbstractQueryBuilderDataTable implements QueryB
 
     /**
      * @var int
-     * @DataTable\Column(source="sessionStatus.id", name="ID", class="")
+     * @DataTable\Column(source="sessionStatus.id", name="ID", class="text-center")
      */
     public $id;
 
     /**
      * @var string
-     * @DataTable\Column(source="sessionStatus.name", name="Nom",  class="")
+     * @DataTable\Column(source="sessionStatus.name", name="Nom",  class="text-center")
      * @DataTable\DefaultSort()
      */
     public $name;

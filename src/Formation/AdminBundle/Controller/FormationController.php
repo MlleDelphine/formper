@@ -32,9 +32,6 @@ class FormationController extends Controller
 
         return $this->render('FormationAdminBundle:Formation:index.html.twig', array(
             'dataTable' => $dataTable,
-//            'objects' => $dataTable
-//            'entity'      => $entity,
-//            'form'   => $deleteForm->createView(),
         ));
     }
     /**
@@ -47,12 +44,56 @@ class FormationController extends Controller
         $form = $this->createCreateForm($entity);
         $form->handleRequest($request);
 
+        //Gestion des prérequis / sessions /sessionDate supprimés
+        $originalRequirements = new ArrayCollection();
+        $originalSessions = new ArrayCollection();
+        $originalSessionDates = new ArrayCollection();
+
+        // Crée un tableau contenant les objets Requirement courants de la
+        // base de données
+        foreach ($entity->getRequirements() as $requirement) {
+            $originalRequirements->add($requirement);
+        }
+        // Crée un tableau contenant les objets Session courants de la
+        // base de données
+        foreach ($entity->getSessions() as $session) {
+            $originalSessions->add($session);
+            foreach($session->getSessionDates() as $date){
+                $originalSessionDates->add($date);
+            }
+        }
+
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+            // supprime la relation entre le requirement et la « Formation »
+            foreach ($originalRequirements as $requirement) {
+                if ($entity->getRequirements()->contains($requirement) == false) {
+                    // supprime la « Formation » du Requirement
+                    $requirement->setFormation(null);
+                    $em->remove($requirement);
+                }
+            }
+            // supprime la relation entre la Session et la « Formation »
+            foreach ($originalSessions as $session) {
+                if ($entity->getSessions()->contains($session) == false) {
+                    // supprime la « Session » de la SessionDate
+                    $session->setFormation(null);
+                    $em->remove($session);
+                }
+                else{
+                    foreach ($originalSessionDates as $date) {
+                        if ($session->getSessionDates()->contains($date) == false) {
+                            // supprime la « SessionDate » de la Session
+                            $date->setSession(null);
+                            $em->remove($date);
+                        }
+                    }
+                }
+            }
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('formation_show', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('formation_edit', array('id' => $entity->getId())));
         }
 
         return $this->render('FormationAdminBundle:Formation:new.html.twig', array(
@@ -76,6 +117,8 @@ class FormationController extends Controller
         ));
 
         $form->add('submit', 'submit', array('label' => 'Créer', 'attr' => array('class' => 'btn btn-sm btn-primary')));
+        $form->add('save', 'submit', array('label' => 'Valider', 'attr' => array('class' => 'btn btn-sm btn-primary')));
+        $form->add('saveagain', 'submit', array('label' => 'Valider', 'attr' => array('class' => 'btn btn-sm btn-primary')));
 
         return $form;
     }

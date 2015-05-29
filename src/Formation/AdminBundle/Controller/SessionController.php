@@ -19,14 +19,16 @@ class SessionController extends Controller
      * Lists all Session entities.
      *
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
-        $em = $this->getDoctrine()->getManager();
+        $dataTable = $this->get('data_tables.manager')->getTable('sessionTable');
 
-        $entities = $em->getRepository('FormationFrontBundle:Session')->findAll();
+        if ($response = $dataTable->ProcessRequest($request)) {
+            return $response;
+        }
 
         return $this->render('FormationAdminBundle:Session:index.html.twig', array(
-            'entities' => $entities,
+            'dataTable' => $dataTable,
         ));
     }
     /**

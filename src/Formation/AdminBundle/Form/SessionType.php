@@ -16,7 +16,8 @@ class SessionType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name', 'text', array('label' => 'Nom :'))
+            ->add('name', 'text', array('label' => 'Nom :',
+                'required' => true))
             ->add('places', new HorizontalSliderType(), array('required' => true,
                 'label' => 'Nombre de places'
              ))
@@ -32,7 +33,7 @@ class SessionType extends AbstractType
                 'allow_add' => true,
                 'allow_delete' => true,
                 'by_reference' => false,
-                'required' => false
+                'required' => true
             ))
         ;
     }

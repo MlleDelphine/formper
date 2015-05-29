@@ -51,7 +51,7 @@ class LevelController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('level_show', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('level_edit', array('id' => $entity->getId())));
         }
 
         return $this->render('FormationAdminBundle:Level:new.html.twig', array(
@@ -174,7 +174,7 @@ class LevelController extends Controller
 
         $deleteForm = $this->createDeleteForm($id);
         $editForm = $this->createEditForm($entity);
-        $editForm->handleRequest($request);
+        $editForm->submit($request->request->get($editForm->getName()));
 
         if ($editForm->isValid()) {
             $em->flush();
@@ -211,6 +211,29 @@ class LevelController extends Controller
 
         return $this->redirect($this->generateUrl('level'));
     }
+    /**
+     * Render delete form in modal
+     *
+     * @param $id
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function deleteFormAction($id){
+        $em = $this->getDoctrine()->getManager();
+
+        $entity = $em->getRepository('FormationFrontBundle:Level')->find($id);
+
+        if (!$entity) {
+            throw $this->createNotFoundException('Unable to find Level entity.');
+        }
+
+        $deleteForm = $this->createDeleteForm($id);
+
+        return $this->render('FormationAdminBundle:Level:delete.html.twig', array(
+            'entity'      => $entity,
+            'form'   => $deleteForm->createView(),
+        ));
+    }
+
 
     /**
      * Creates a form to delete a Level entity by id.

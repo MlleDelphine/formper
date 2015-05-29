@@ -48,7 +48,7 @@ class TechnologyController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('technology_show', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('technology_edit', array('id' => $entity->getId())));
         }
 
         return $this->render('FormationAdminBundle:Technology:new.html.twig', array(
@@ -171,7 +171,7 @@ class TechnologyController extends Controller
 
         $deleteForm = $this->createDeleteForm($id);
         $editForm = $this->createEditForm($entity);
-        $editForm->handleRequest($request);
+        $editForm->submit($request->request->get($editForm->getName()));
 
         if ($editForm->isValid()) {
             $em->flush();
@@ -210,6 +210,28 @@ class TechnologyController extends Controller
         return $this->redirect($this->generateUrl('technology'));
     }
 
+    /**
+     * Render delete form in modal
+     *
+     * @param $id
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function deleteFormAction($id){
+        $em = $this->getDoctrine()->getManager();
+
+        $entity = $em->getRepository('FormationFrontBundle:Technology')->find($id);
+
+        if (!$entity) {
+            throw $this->createNotFoundException('Unable to find Formation entity.');
+        }
+
+        $deleteForm = $this->createDeleteForm($id);
+
+        return $this->render('FormationAdminBundle:Technology:delete.html.twig', array(
+            'entity'      => $entity,
+            'form'   => $deleteForm->createView(),
+        ));
+    }
     /**
      * Creates a form to delete a Technology entity by id.
      *

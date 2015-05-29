@@ -18,17 +18,21 @@ class SessionDateType extends AbstractType
             ->add('dateStart', 'date', array(
                 'widget' => 'single_text',
                 'input' => 'datetime',
-                'format' => 'dd/MM/yyyy'))
+                'format' => 'dd/MM/yyyy',
+                'required' => true))
             ->add('dateEnd', 'date', array(
                 'widget' => 'single_text',
                 'input' => 'datetime',
-                'format' => 'dd/MM/yyyy'))
+                'format' => 'dd/MM/yyyy',
+                'required' => true))
             ->add('timeStart', 'time', array('label' => 'Heure de départ',
                 'widget' => 'single_text',
-                'input' => 'datetime'))
+                'input' => 'datetime',
+                'required' => true))
             ->add('timeEnd', 'time', array('label' => 'Heure de fin',
                 'widget' => 'single_text',
-                'input' => 'datetime'))
+                'input' => 'datetime',
+                'required' => true))
         ;
     }
     

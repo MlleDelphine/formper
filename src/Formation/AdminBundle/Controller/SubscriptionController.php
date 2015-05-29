@@ -171,7 +171,7 @@ class SubscriptionController extends Controller
 
         $deleteForm = $this->createDeleteForm($id);
         $editForm = $this->createEditForm($entity);
-        $editForm->handleRequest($request);
+        $editForm->submit($request->request->get($editForm->getName()));
 
         if ($editForm->isValid()) {
             $em->flush();
@@ -207,6 +207,29 @@ class SubscriptionController extends Controller
         }
 
         return $this->redirect($this->generateUrl('subscription'));
+    }
+
+    /**
+     * Render delete form in modal
+     *
+     * @param $id
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function deleteFormAction($id){
+        $em = $this->getDoctrine()->getManager();
+
+        $entity = $em->getRepository('FormationFrontBundle:SubscriptionStatus')->find($id);
+
+        if (!$entity) {
+            throw $this->createNotFoundException('Unable to find SubscriptionStatus entity.');
+        }
+
+        $deleteForm = $this->createDeleteForm($id);
+
+        return $this->render('FormationAdminBundle:SubscriptionStatus:delete.html.twig', array(
+            'entity'      => $entity,
+            'form'   => $deleteForm->createView(),
+        ));
     }
 
     /**

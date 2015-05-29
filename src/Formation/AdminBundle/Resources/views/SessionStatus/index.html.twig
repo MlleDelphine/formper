@@ -14,20 +14,34 @@
 {% block body -%}
     <h1>Liste des différents statuts liés aux sessions</h1>
 
-    <div class="table-responsive">
-        {{ addDataTable(dataTable,
-        {"language": {
-            'url': 'dataTables.french.lang'
-        }
-        }
-        ) }}
-    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Block with Options -->
+            <div class="block">
+                <!-- Block with Options Title -->
+                <div class="block-title">
+                    <div class="block-options pull-right">
+                        <a type="submit" href="{{ path('sessionstatus_new') }}" class="btn btn-sm btn-info"><i class="fa fa-plus"></i> Créer un nouveau statut</a>
+                    </div>
+                    <h2>Liste des différentes statuts de session</h2>
+                </div>
+                <!-- END Block with Options Title -->
 
-        <ul>
-        <li>
-            <a href="{{ path('sessionstatus_new') }}">
-               Ajouter un nouveau statut de session
-            </a>
-        </li>
-    </ul>
+                <!-- Block with Options Content -->
+                <div class="block-content">
+
+                    <div class="table-responsive">
+                        {{ addDataTable(dataTable,
+                        {"language": {
+                            'url': 'dataTables.french.lang'
+                        }
+                        }
+                        ) }}
+                    </div>
+                </div>
+                <!-- END Block with Options Content -->
+            </div>
+            <!-- END Block with Options -->
+        </div>
+    </div>
     {% endblock %}

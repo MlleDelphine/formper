@@ -27,34 +27,34 @@ class FormationTable extends AbstractQueryBuilderDataTable implements QueryBuild
 
     /**
      * @var int
-     * @DataTable\Column(source="formation.id", name="ID", class="")
+     * @DataTable\Column(source="formation.id", name="ID", class="text-center")
      */
     public $id;
 
     /**
      * @var string
-     * @DataTable\Column(source="formation.name", name="Nom",  class="")
+     * @DataTable\Column(source="formation.name", name="Nom",  class="text-center")
      * @DataTable\DefaultSort()
      */
     public $name;
 
     /**
      * @var string
-     * @DataTable\Column(source="formation.shortDescription", name="Description",  class="")
+     * @DataTable\Column(source="formation.shortDescription", name="Description",  class="text-center")
      * @DataTable\DefaultSort()
      */
     public $shortDescription;
 
     /**
      * @var string
-     * @DataTable\Column(source="formation.price", name="Prix",  class="")
+     * @DataTable\Column(source="formation.price", name="Prix",  class="text-center")
      * @DataTable\DefaultSort()
      */
     public $price;
 
     /**
      * @var string
-     * @DataTable\Column(source="formation.published", name="Statut",  class="")
+     * @DataTable\Column(source="formation.published", name="Statut",  class="text-center")
      * @DataTable\Format(dataFields={"published":"formation.published"}, template="FormationAdminBundle:Formation:_published.html.twig")
      * @DataTable\DefaultSort()
      */
@@ -62,14 +62,14 @@ class FormationTable extends AbstractQueryBuilderDataTable implements QueryBuild
 
     /**
      * @var string
-     * @DataTable\Column(source="formation.teacher", name="Formateur",  class="")
+     * @DataTable\Column(source="formation.teacher", name="Formateur",  class="text-center")
      * @DataTable\DefaultSort()
      */
     public $teacher;
 
     /**
      * @var string
-     * @DataTable\Column(source="formation.level.name", name="Niveau",  class="")
+     * @DataTable\Column(source="formation.level.name", name="Niveau",  class="text-center")
      * @DataTable\DefaultSort()
      */
     public $level;

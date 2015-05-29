@@ -11,10 +11,9 @@ namespace Formation\FrontBundle\Entity;
 use Brown298\DataTablesBundle\MetaData as DataTable;
 use Brown298\DataTablesBundle\Model\DataTable\AbstractQueryBuilderDataTable;
 use Brown298\DataTablesBundle\Model\DataTable\QueryBuilderDataTableInterface;
-use Brown298\DataTablesBundle\Test\DataTable\QueryBuilderDataTable;
 
 use Symfony\Component\HttpFoundation\Request;
-use Doctrine\ORM\EntityManager;
+
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -46,7 +45,7 @@ class TechnologyTable extends AbstractQueryBuilderDataTable implements QueryBuil
 
     /**
      * @DataTable\Column(source="", name="Actions",  class="")
-     * @DataTable\Format(dataFields={"id":"level.id"}, template="FormationAdminBundle:Technology:_dataTables_action.html.twig")
+     * @DataTable\Format(dataFields={"id":"technology.id"}, template="FormationAdminBundle:Technology:_dataTables_action.html.twig")
      */
     public $action;
 
@@ -67,8 +66,8 @@ class TechnologyTable extends AbstractQueryBuilderDataTable implements QueryBuil
     public function getQueryBuilder(Request $request = null)
     {
 
-        $levelRepository = $this->em->getRepository('FormationFrontBundle:Technology');
-        $qb = $levelRepository->createQueryBuilder('technology');
+        $technologyRepository = $this->em->getRepository('FormationFrontBundle:Technology');
+        $qb = $technologyRepository->createQueryBuilder('technology');
 
         return $qb;
     }

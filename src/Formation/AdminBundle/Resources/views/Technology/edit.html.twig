@@ -19,12 +19,12 @@
         <div class="block">
             <div class="block-title">
                 <div class="block-options pull-right">
-                    <a href="{{ path('technology') }}" class="btn btn-alt btn-sm btn-default toggle-bordered enable-tooltip" data-toggle="button" title="Retourner à la liste">Retour</a>
+                    <a href="{{ path('technology') }}" class="btn btn-alt btn-sm btn-warning toggle-bordered enable-tooltip" title="Retourner à la liste"><i class="fa fa-arrow-left"></i> Retour à la liste</a>
                 </div>
                 <h2>Edition d'une technologie</h2>
             </div>
 
-            <form class="form-horizontal form-bordered" action="{{ path('technology_create') }}" method="post" {{ form_enctype(edit_form) }}>
+            <form class="form-horizontal form-bordered" action="{{ path('technology_update', {'id': entity.id}) }}" method="post" {{ form_enctype(edit_form) }}>
                 <div class="form-group">
                     {{ form_label(edit_form.name, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
                     <div class="col-md-9">
