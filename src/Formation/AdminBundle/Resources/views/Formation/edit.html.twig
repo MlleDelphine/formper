@@ -146,7 +146,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-md-3 control-label">Session</label>
+                                <label class="col-md-3 control-label">Session(s)</label>
                                 <div class="col-md-9 sessions" data-prototype="        {% filter escape %}
              {{ include('FormationAdminBundle:Form:prototype_sessions.html.twig', { 'form': edit_form.sessions.vars.prototype|e }) }}         {% endfilter %}">
                                     {%  for session in edit_form.sessions %}
@@ -160,7 +160,7 @@
                                             <div class="col-md-4 session-element">
                                                 {{ form_label(session.places, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
                                                 <div class="col-md-9">
-                                                    {{ form_widget(session.places, { 'attr': {'class': 'form-control'} }) }}
+                                                    {{ form_widget(session.places, { 'attr': {'class': 'form-control', 'data-slider-value': session.vars.value.places} }) }}
                                                 </div>
                                             </div>
                                             <div class="col-md-4 session-element">

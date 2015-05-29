@@ -1,4 +1,5 @@
 services:
-#    formation_admin.example:
-#        class: Formation\AdminBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
+#    type.extended_choice_type:
+#        class:  Formation\AdminBundle\Form\Type\HorizontalSliderType
+#            tags:
+#                - { name: form.type, alias: horizontalSlider }

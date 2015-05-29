@@ -17,7 +17,9 @@ class SessionType extends AbstractType
     {
         $builder
             ->add('name', 'text', array('label' => 'Nom :'))
-            ->add('places', new HorizontalSliderType(), array('required' => true, 'label' => 'Nombre de places'))
+            ->add('places', new HorizontalSliderType(), array('required' => true,
+                'label' => 'Nombre de places'
+             ))
             ->add('status', 'genemu_jqueryselect2_entity', array(
                 'class' => 'FormationFrontBundle:SessionStatus',
                 'property' => 'name',
