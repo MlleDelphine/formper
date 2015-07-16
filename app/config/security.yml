@@ -59,7 +59,8 @@ security:
         admin:
             pattern: ^/admin
             form_login:
-                provider:    fos_userbundle
+                provider:    chain_provider
+                csrf_provider: form.csrf_provider
                 check_path: /admin/login_check
                 login_path: /login
             logout:

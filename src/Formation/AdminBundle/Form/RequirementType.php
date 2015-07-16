@@ -30,13 +30,14 @@ class RequirementType extends AbstractType
                 'multiple' => false,
                 'placeholder' => 'Sélectionner',
                 'required' => true))
+
         ;
     }
     
     /**
-     * @param OptionsResolverInterface $resolver
+     * @param OptionsResolver $resolver
      */
-    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
             'data_class' => 'Formation\FrontBundle\Entity\Requirement'
@@ -48,6 +49,6 @@ class RequirementType extends AbstractType
      */
     public function getName()
     {
-        return 'formation_frontbundle_requirement';
+        return 'formation_adminbundle_requirement';
     }
 }

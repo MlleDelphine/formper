@@ -26,7 +26,8 @@ class Formation
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank(message="Le nom doit être rempli")
+     * @Assert\Type(type="string")
      * @ORM\Column(name="name", type="string", length=255)
      */
     private $name;
@@ -397,19 +398,19 @@ class Formation
         return $this->technologies;
     }
 
-    /**
-     * Add requirements
-     *
-     * @param \Formation\FrontBundle\Entity\Requirement $requirements
-     * @return Formation
-     */
-    public function addRequirement(\Formation\FrontBundle\Entity\Requirement $requirements)
-    {
-        $requirements->setFormation($this);
-        $this->requirements[] = $requirements;
-
-        return $this;
-    }
+//    /**
+//     * Add requirements
+//     *
+//     * @param \Formation\FrontBundle\Entity\Requirement $requirements
+//     * @return Formation
+//     */
+//    public function addRequirement(\Formation\FrontBundle\Entity\Requirement $requirements)
+//    {
+//        $requirements->setFormation($this);
+//        $this->requirements[] = $requirements;
+//
+//        return $this;
+//    }
 
     /**
      * Set requirements
@@ -419,6 +420,7 @@ class Formation
      */
     public function setRequirements(ArrayCollection $requirements)
     {
+
         foreach ($requirements as $requirement) {
             $requirement->setFormation($this);
         }

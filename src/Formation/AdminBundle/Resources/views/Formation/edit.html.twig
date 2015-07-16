@@ -1,26 +1,8 @@
-{% extends "::baseadmin.html.twig" %}
+{% extends "FormationAdminBundle::baseform.html.twig" %}
 
 {% block title %}
-    {{ parent() }} - Listing des différents niveaux
+    {{ parent() }} - Edition formation
 {% endblock %}
-
-{% block stylesheets %}
-    {{ parent() }}
-    {% if edit_form is defined %}
-        <link rel="stylesheet" href="{{ asset('bundles/adminbundle/js/select2-4.0.0/css/select2.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('bundles/adminbundle/css/forms.css') }}">
-        <link rel="stylesheet" href="{{ asset('bundles/adminbundle/js/datetimepicker/jquery.datetimepicker.css') }}">
-        {{ form_stylesheet(edit_form) }}
-    {% endif %}
-{% endblock %}
-
-{% block sidebarmenu %}
-    {{ include('FormationAdminBundle::sidebar-menu.html.twig',{ 'pseudo': 'Delphine'}) }}
-{% endblock %}
-
- {% block headersection %}
-     {{ include('FormationAdminBundle::header.html.twig') }}
- {% endblock %}
 
 {% block body -%}
     <h1>Section formation</h1>
@@ -89,12 +71,12 @@
                                     <a href="{{ path('formation') }}" class="btn btn-alt btn-sm btn-default toggle-bordered enable-tooltip" data-toggle="button" title="Retourner à la liste">Retour</a>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                {{ form_label(edit_form.teacher, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
-                                <div class="col-md-9">
-                                    {{ form_widget(edit_form.teacher, { 'attr': {'class': 'select-select2', 'style': 'width: 100%'} }) }}
-                                </div>
-                            </div>
+                            {#<div class="form-group">#}
+                                {#{{ form_label(edit_form.teacher, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}#}
+                                {#<div class="col-md-9">#}
+                                    {#{{ form_widget(edit_form.teacher, { 'attr': {'class': 'select-select2', 'style': 'width: 100%'} }) }}#}
+                                {#</div>#}
+                            {#</div>#}
                             <div class="form-group">
                                 {{ form_label(edit_form.level, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
                                 <div class="col-md-9">
@@ -226,13 +208,4 @@
             {{ form_end(delete_form) }}
         </div>
     </div>
-{% endblock %}
-{% block scripts %}
-    {{ parent() }}
-    {% if edit_form is defined %}
-        <script src="{{ asset('bundles/adminbundle/js/tinymce/tinymce.min.js') }}"></script>
-        <script src="{{ asset('bundles/adminbundle/js/custom/dynamic_fields.js') }}"></script>
-        <script src="{{ asset('bundles/adminbundle/js/datetimepicker/jquery.datetimepicker.js') }}"></script>
-        {{ form_javascript(edit_form) }}
-    {% endif %}
 {% endblock %}

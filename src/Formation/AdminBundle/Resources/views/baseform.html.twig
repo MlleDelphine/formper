@@ -1,0 +1,48 @@
+{% extends "::baseadmin.html.twig" %}
+
+{% block title %}
+    {{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% if (edit_form is defined) or (form is defined) %}
+        <link rel="stylesheet" href="{{ asset('bundles/adminbundle/js/select2-4.0.0/css/select2.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/adminbundle/css/forms.css') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/adminbundle/js/datetimepicker/jquery.datetimepicker.css') }}">
+        {% if edit_form is defined %}
+            {{ form_stylesheet(edit_form) }}
+        {% elseif form is defined %}
+            {{ form_stylesheet(form) }}
+        {% endif %}
+    {% endif %}
+{% endblock %}
+
+{% block sidebarmenu %}
+    {{ include('FormationAdminBundle::sidebar-menu.html.twig',{ 'pseudo': 'Delphine'}) }}
+{% endblock %}
+
+ {% block headersection %}
+     {{ include('FormationAdminBundle::header.html.twig') }}
+ {% endblock %}
+
+{% block body -%}
+
+{% endblock %}
+{% block scripts %}
+    {{ parent() }}
+    {% if (edit_form is defined) or (form is defined) %}
+        <script src="{{ asset('bundles/adminbundle/js/tinymce/tinymce.min.js') }}"></script>
+        <script src="{{ asset('bundles/adminbundle/js/custom/dynamic_fields.js') }}"></script>
+        <script src="{{ asset('bundles/adminbundle/js/datetimepicker/jquery.datetimepicker.js') }}"></script>
+        <script type="text/javascript">
+
+        </script>
+        {% if edit_form is defined %}
+            {{ form_javascript(edit_form) }}
+        {% elseif form is defined %}
+            {{ form_javascript(form) }}
+        {% endif %}
+
+    {% endif %}
+{% endblock %}

@@ -22,8 +22,8 @@ class Requirement
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Formation\FrontBundle\Entity\Formation", inversedBy="requirements", cascade={"persist"})
-     * @ORM\JoinColumn(name="formation_id", referencedColumnName="id", )
+     * @ORM\ManyToOne(targetEntity="Formation\FrontBundle\Entity\Formation", inversedBy="requirements")
+     * @ORM\JoinColumn(name="formation_id", referencedColumnName="id")
      */
     private $formation;
 
@@ -39,11 +39,12 @@ class Requirement
      */
     private $level;
 
-
+//
     public function __toString()
     {
         return (string)$this->getFormation()->getName(). ' - '.$this->getLevel()->getName();
     }
+
 
     /**
      * Get id

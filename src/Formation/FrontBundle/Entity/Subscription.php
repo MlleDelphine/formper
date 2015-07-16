@@ -53,6 +53,13 @@ class Subscription
      */
     private $user;
 
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->created = new \Datetime();
+    }
 
 
     /**

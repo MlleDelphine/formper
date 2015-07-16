@@ -5,7 +5,7 @@ namespace Formation\AdminBundle\Form;
 use Formation\AdminBundle\Form\Type\HorizontalSliderType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class SessionType extends AbstractType
 {
@@ -19,8 +19,7 @@ class SessionType extends AbstractType
             ->add('name', 'text', array('label' => 'Nom :',
                 'required' => true))
             ->add('places', new HorizontalSliderType(), array('required' => true,
-                'label' => 'Nombre de places'
-             ))
+                'label' => 'Nombre de places'))
             ->add('status', 'genemu_jqueryselect2_entity', array(
                 'class' => 'FormationFrontBundle:SessionStatus',
                 'property' => 'name',
@@ -41,7 +40,7 @@ class SessionType extends AbstractType
     /**
      * @param OptionsResolverInterface $resolver
      */
-    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
             'data_class' => 'Formation\FrontBundle\Entity\Session'

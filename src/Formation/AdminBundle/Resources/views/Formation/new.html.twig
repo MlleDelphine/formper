@@ -1,30 +1,10 @@
-{% extends "::baseadmin.html.twig" %}
-
+{% extends "FormationAdminBundle::baseform.html.twig" %}
 {% block title %}
-    {{ parent() }} - Listing des différents niveaux
+    {{ parent() }} - Création formation
 {% endblock %}
-
-{% block sidebarmenu %}
-    {{ include('FormationAdminBundle::sidebar-menu.html.twig',{ 'pseudo': 'Delphine'}) }}
-{% endblock %}
-
-{% block stylesheets %}
-    {{ parent() }}
-    {% if form is defined %}
-        <link rel="stylesheet" href="{{ asset('bundles/adminbundle/js/select2-4.0.0/css/select2.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('bundles/adminbundle/css/forms.css') }}">
-        <link rel="stylesheet" href="{{ asset('bundles/adminbundle/js/datetimepicker/jquery.datetimepicker.css') }}">
-        {{ form_stylesheet(form) }}
-    {% endif %}
-{% endblock %}
-
- {% block headersection %}
-     {{ include('FormationAdminBundle::header.html.twig') }}
- {% endblock %}
 
 {% block body -%}
     <h1>Section formation</h1>
-
     <div class="col-md-12">
         <div class="block">
             <!-- Forum Tabs Title -->
@@ -57,9 +37,9 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                {{ form_label(form.longDescription, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+                                {{ form_label(form.longDescription, null,{'label_attr': {'class':'col-md-3 control-label'} }) }}
                                 <div class="col-md-9">
-                                    {{ form_widget(form.longDescription, { 'attr': {'class': ''} }) }}
+                                    {{ form_widget(form.longDescription, { 'attr': {'class': 'form-control'} }) }}
                                 </div>
                             </div>
                             <div class="form-group">
@@ -145,6 +125,7 @@
                                     <a href="{{ path('formation') }}" class="btn btn-alt btn-sm btn-default toggle-bordered enable-tooltip" data-toggle="button" title="Retourner à la liste">Retour</a>
                                 </div>
                             </div>
+                            {# Session #}
                             <div class="form-group">
                                 <label class="col-md-3 control-label">Session(s)</label>
                                 <div class="col-md-9 sessions" data-prototype="        {% filter escape %}
@@ -217,13 +198,5 @@
             </form>
         </div>
     </div>
-{% endblock %}{% block scripts %}
-    {{ parent() }}
-    {% if form is defined %}
-        <script src="{{ asset('bundles/adminbundle/js/tinymce/tinymce.min.js') }}"></script>
-        <script src="{{ asset('bundles/adminbundle/js/custom/dynamic_fields.js') }}"></script>
-        <script src="{{ asset('bundles/adminbundle/js/datetimepicker/jquery.datetimepicker.js') }}"></script>
-        {{ form_javascript(form) }}
-    {% endif %}
 {% endblock %}
 

@@ -3,6 +3,9 @@ imports:
     - { resource: security.yml }
     - { resource: services.yml }
     - { resource: sonata.yml }
+    - { resource: fos_user.yml }
+    - { resource: fr3d_ldap.yml }
+
 
 framework:
     #esi:             ~
@@ -168,31 +171,31 @@ genemu_form:
             allowClear: false
             minimumInputLength: 0
 
-fos_user:
-    db_driver: orm
-    firewall_name: main
-    user_class: Formation\UserBundle\Entity\User
+#fos_user:
+#    db_driver: orm
+#    firewall_name: main
+#    user_class: Formation\UserBundle\Entity\User
 
-fr3d_ldap:
-    driver:
-        host:         rouen70.zephyr-web.fr
-#        port:         389    # Optional
-#        version:        3    # I think this is specific to Windows AD - possibly 2003
-#        username:     ldapproxyuser@yourADdomain    # Windows requires you to authenticate to be able to query
-#        password:     whatever    # Optional
-#        optReferrals: 0  #  I think this is specific to Windows AD - possibly 2003
-#        useSsl:       true   # Enable SSL negotiation. Optional
-#        useStartTls:  true   # Enable TLS negotiation. Optional
-    user:
-        baseDn: ou=Zephyr,ou=users,dc=ldap,dc=Zephy-web,dc=fr #cn=users, dc=yourADdomain, dc=local
-#        baseDn: ou=users
-        filter: (&(ObjectClass=Person))
-        attributes:          # Specify ldap attributes mapping [ldap attribute, user object method]
-#           - { ldap_attr: uid,  user_method: setUsername } # Default
-#           - { ldap_attr: sAMAccountName,   user_method: setName }     # Optional
-           - { ldap_attr: samaccountname,   user_method: setUsername }     # I found that these needed to be lowercase
-           - { ldap_attr: proxyaddresses, user_method: setEmailFromAD }     # to pick up email addresses...read on
-#           - { ldap_attr: ...,  user_method: ... }         # Optional
-#   service:
-#       user_manager: fos_user.user_manager          # Overrides default user manager
-#       ldap_manager: fr3d_ldap.ldap_manager.default # Overrides default ldap manager
+#fr3d_ldap:
+#    driver:
+#        host:         rouen70.zephyr-web.fr
+##        port:         389    # Optional
+##        version:        3    # I think this is specific to Windows AD - possibly 2003
+##        username:     ldapproxyuser@yourADdomain    # Windows requires you to authenticate to be able to query
+##        password:     whatever    # Optional
+##        optReferrals: 0  #  I think this is specific to Windows AD - possibly 2003
+##        useSsl:       true   # Enable SSL negotiation. Optional
+##        useStartTls:  true   # Enable TLS negotiation. Optional
+#    user:
+#        baseDn: ou=Zephyr,ou=users,dc=ldap,dc=Zephy-web,dc=fr #cn=users, dc=yourADdomain, dc=local
+##        baseDn: ou=users
+#        filter: (&(ObjectClass=Person))
+#        attributes:          # Specify ldap attributes mapping [ldap attribute, user object method]
+##           - { ldap_attr: uid,  user_method: setUsername } # Default
+##           - { ldap_attr: sAMAccountName,   user_method: setName }     # Optional
+#           - { ldap_attr: samaccountname,   user_method: setUsername }     # I found that these needed to be lowercase
+#           - { ldap_attr: proxyaddresses, user_method: setEmailFromAD }     # to pick up email addresses...read on
+##           - { ldap_attr: ...,  user_method: ... }         # Optional
+##   service:
+##       user_manager: fos_user.user_manager          # Overrides default user manager
+##       ldap_manager: fr3d_ldap.ldap_manager.default # Overrides default ldap manager

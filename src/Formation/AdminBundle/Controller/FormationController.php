@@ -42,7 +42,10 @@ class FormationController extends Controller
     {
         $entity = new Formation();
         $form = $this->createCreateForm($entity);
+
         $form->handleRequest($request);
+        dump($form->getData());
+        die;
 
         //Gestion des prérequis / sessions /sessionDate supprimés
         $originalRequirements = new ArrayCollection();
@@ -64,6 +67,7 @@ class FormationController extends Controller
         }
 
         if ($form->isValid()) {
+
             $em = $this->getDoctrine()->getManager();
             // supprime la relation entre le requirement et la « Formation »
             foreach ($originalRequirements as $requirement) {

@@ -17,12 +17,12 @@ class FormationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name', 'text', array('label' => 'Nom :'))
+            ->add('name', 'text', array('label' => 'Nom :', 'required' => false))
             ->add('shortDescription', 'genemu_tinymce', array(
-                'required' => true,
+                'required' => false,
                 'label' => 'Description courte'))
             ->add('longDescription', 'genemu_tinymce', array(
-                'required' => true,
+                'required' => false,
                 'label' => 'Description complète'))
             ->add('price', new EuroType(), array('label' => 'Prix :'))
             ->add('published', new BooleanType(), array('label' => 'Publié',

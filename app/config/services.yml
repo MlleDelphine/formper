@@ -4,6 +4,11 @@ parameters:
 #    parameter_name: value
 
 services:
-#    service_name:
-#        class: AppBundle\Directory\ClassName
-#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+    zephyr.user.ldap_manager:
+        class: Formation\UserBundle\Service\LdapManager
+        arguments:
+            - "@fr3d_ldap.ldap_driver"
+            - "@fr3d_ldap.user_manager"
+            - "%fr3d_ldap.ldap_manager.parameters%"
+        calls:
+            - [ setBaseDn, [ %baseDn% ] ]
