@@ -315,6 +315,21 @@ class Formation
     {
         return $this->level;
     }
+    /**
+     * Set sessions
+     *
+     * @param \Formation\FrontBundle\Entity\Session $sessions
+     * @return Formation
+     */
+    public function setSessions(ArrayCollection $sessions)
+    {
+        foreach ($sessions as $session) {
+            $session->setFormation($this);
+        }
+
+        $this->sessions = $sessions;
+    }
+
 
     /**
      * Add sessions
@@ -329,6 +344,9 @@ class Formation
 
         return $this;
     }
+
+
+
 
     /**
      * Remove sessions
@@ -404,13 +422,13 @@ class Formation
 //     * @param \Formation\FrontBundle\Entity\Requirement $requirements
 //     * @return Formation
 //     */
-//    public function addRequirement(\Formation\FrontBundle\Entity\Requirement $requirements)
-//    {
-//        $requirements->setFormation($this);
-//        $this->requirements[] = $requirements;
-//
-//        return $this;
-//    }
+    public function addRequirement(\Formation\FrontBundle\Entity\Requirement $requirements)
+    {
+        $requirements->setFormation($this);
+        $this->requirements[] = $requirements;
+
+        return $this;
+    }
 
     /**
      * Set requirements
@@ -420,7 +438,6 @@ class Formation
      */
     public function setRequirements(ArrayCollection $requirements)
     {
-
         foreach ($requirements as $requirement) {
             $requirement->setFormation($this);
         }

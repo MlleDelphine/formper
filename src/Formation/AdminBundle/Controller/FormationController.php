@@ -44,8 +44,8 @@ class FormationController extends Controller
         $form = $this->createCreateForm($entity);
 
         $form->handleRequest($request);
-        dump($form->getData());
-        die;
+//        dump($form->getData());
+//        die;
 
         //Gestion des prérequis / sessions /sessionDate supprimés
         $originalRequirements = new ArrayCollection();

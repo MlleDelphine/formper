@@ -4,6 +4,7 @@ namespace Formation\AdminBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 class RequirementType extends AbstractType
@@ -34,15 +35,17 @@ class RequirementType extends AbstractType
         ;
     }
     
+
     /**
-     * @param OptionsResolver $resolver
+     * @param OptionsResolverInterface $resolver
      */
-    public function configureOptions(OptionsResolver $resolver)
+    public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
             'data_class' => 'Formation\FrontBundle\Entity\Requirement'
         ));
     }
+
 
     /**
      * @return string

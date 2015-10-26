@@ -56,7 +56,8 @@ class FormationType extends AbstractType
                 'allow_add' => true,
                 'allow_delete' => true,
                 'by_reference' => false,
-                'required' => false
+                'required' => false,
+              //  'data_class' => 'Formation\FrontBundle\Entity\Requirement'
             ))
             ->add('sessions', 'collection', array(
                 'type' => new SessionType(),
