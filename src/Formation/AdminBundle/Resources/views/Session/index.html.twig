@@ -1,0 +1,46 @@
+{% extends "::baseadmin.html.twig" %}
+
+{% block title %}
+    {{ parent() }} - Listing des différentes sessions
+{% endblock %}
+
+{% block sidebarmenu %}
+    {{ include('FormationAdminBundle::sidebar-menu.html.twig',{ 'pseudo': 'Delphine'}) }}
+{% endblock %}
+
+ {% block headersection %}
+     {{ include('FormationAdminBundle::header.html.twig') }}
+ {% endblock %}
+
+{% block body -%}
+    <h1>Session list</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Block with Options -->
+            <div class="block">
+                <!-- Block with Options Title -->
+                <div class="block-title">
+                    <div class="block-options pull-right">
+                        {#<a type="submit" href="{{ path('session_new') }}" class="btn btn-sm btn-info"><i class="fa fa-plus"></i> Créer une nouvelle formation</a>#}
+                    </div>
+                    <h2>Liste des différentes sessions</h2>
+                </div>
+                <!-- END Block with Options Title -->
+
+                <!-- Block with Options Content -->
+                <div class="block-content">
+                    <div class="table-responsive">
+                        {{ addDataTable(dataTable,
+                        {"language": {
+                            'url': 'dataTables.french.lang'
+                        }
+                        }
+                        ) }}
+                    </div>
+                </div>
+                <!-- END Block with Options Content -->
+            </div>
+            <!-- END Block with Options -->
+        </div>
+    </div>
+{% endblock %}

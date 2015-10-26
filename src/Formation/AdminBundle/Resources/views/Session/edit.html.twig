@@ -1,0 +1,28 @@
+{% extends "::baseadmin.html.twig" %}
+
+{% block title %}
+    {{ parent() }} - Listing des différents niveaux
+{% endblock %}
+
+{% block sidebarmenu %}
+    {{ include('FormationAdminBundle::sidebar-menu.html.twig',{ 'pseudo': 'Delphine'}) }}
+{% endblock %}
+
+ {% block headersection %}
+     {{ include('FormationAdminBundle::header.html.twig') }}
+ {% endblock %}
+
+{% block body -%}
+    <h1>Session edit</h1>
+
+    {{ form(edit_form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('session') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

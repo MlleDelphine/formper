@@ -1,0 +1,56 @@
+sonata_media:
+    db_driver: doctrine_orm
+    class:
+        media:              Formation\MediaBundle\Entity\Media #à changer (avant :  Application\Sonata\MediaBundle\Entity\Media)
+        gallery:            Application\Sonata\MediaBundle\Entity\Gallery
+        gallery_has_media:  Application\Sonata\MediaBundle\Entity\GalleryHasMedia
+    default_context: default
+    contexts:
+        default:  # the default context is mandatory
+            providers:
+                - sonata.media.provider.image
+                - sonata.media.provider.file
+
+            formats:
+                preview: { width: 100 , quality: 100}
+                small:   { width: 200 , quality: 100}
+                medium:  { width: 300, quality: 100}
+                large:   { width: 500, quality: 100 }
+        trainer_media:
+            providers:
+                - sonata.media.provider.image
+                - sonata.media.provider.file
+
+            formats:
+                preview: { width: 100 , quality: 100}
+                small:   { width: 200 , quality: 100}
+                medium:  { width: 300, quality: 100}
+                large:   { width: 500, quality: 100 }
+        technology_media:
+            providers:
+                - sonata.media.provider.image
+                - sonata.media.provider.file
+
+            formats:
+                preview: { width: 100 , quality: 100}
+                small:   { width: 200 , quality: 100}
+                medium:  { height: 750,  quality: 100}
+                large:   { width: 500, quality: 100 }
+        formation_media:
+            providers:
+                - sonata.media.provider.image
+                - sonata.media.provider.file
+
+            formats:
+                preview: { width: 100 , quality: 100}
+                small:   { width: 200 , quality: 100}
+                medium:  { width: 300, quality: 100}
+                large:   { width: 500, quality: 100 }
+    cdn:
+        server:
+            path: /uploads/media # http://media.sonata-project.org/
+
+    filesystem:
+        local:
+            directory:  %kernel.root_dir%/../web/uploads/media
+            create:     false

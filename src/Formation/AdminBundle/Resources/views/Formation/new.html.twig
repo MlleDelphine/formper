@@ -1,0 +1,202 @@
+{% extends "FormationAdminBundle::baseform.html.twig" %}
+{% block title %}
+    {{ parent() }} - Création formation
+{% endblock %}
+
+{% block body -%}
+    <h1>Section formation</h1>
+    <div class="col-md-12">
+        <div class="block">
+            <!-- Forum Tabs Title -->
+            <div class="block-title">
+                <ul class="nav nav-tabs" data-toggle="tabs">
+                    <li class="active"><a href="#formation-general">Général</a></li>
+                    <li><a href="#formation-technicals">Techniques</a></li>
+                    <li><a href="#formation-sessions">Session(s)</a></li>
+                </ul>
+            </div>
+            <form class="form-horizontal form-bordered" action="{{ path('formation_create') }}" method="post" {{ form_enctype(form) }}>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="formation-general">
+                        <div class="block">
+                            <div class="block-title">
+                                <div class="block-options pull-right">
+                                    <a href="{{ path('formation') }}" class="btn btn-alt btn-sm btn-warning toggle-bordered enable-tooltip" title="Retourner à la liste"><i class="fa fa-arrow-left"></i> Retour à la liste</a>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                {{ form_label(form.name, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+                                <div class="col-md-9">
+                                    {{ form_widget(form.name, { 'attr': {'class': 'form-control'} }) }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                {{ form_label(form.shortDescription, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+                                <div class="col-md-9">
+                                    {{ form_widget(form.shortDescription, { 'attr': {'class': 'form-control'} }) }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                {{ form_label(form.longDescription, null,{'label_attr': {'class':'col-md-3 control-label'} }) }}
+                                <div class="col-md-9">
+                                    {{ form_widget(form.longDescription, { 'attr': {'class': 'form-control'} }) }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                {{ form_label(form.price, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+                                <div class="col-md-9">
+                                    {{ form_widget(form.price) }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                {{ form_label(form.published, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+                                <div class="col-md-9">
+                                    {{ form_widget(form.published, { 'attr': {'class': 'form-control'} }) }}
+                                </div>
+                            </div>
+                            <div class="form-group form-actions">
+                                <div class="col-md-3 col-md-offset-3">
+                                    {{ form_widget(form.submit) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="formation-technicals">
+                        <div class="block">
+                            <div class="block-title">
+                                <div class="block-options pull-right">
+                                    <a href="{{ path('formation') }}" class="btn btn-alt btn-sm btn-default toggle-bordered enable-tooltip" data-toggle="button" title="Retourner à la liste">Retour</a>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                {{ form_label(form.teacher, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+                                <div class="col-md-9">
+                                    {{ form_widget(form.teacher, { 'attr': {'class': 'select-select2', 'style': 'width: 100%'} }) }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                {{ form_label(form.level, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+                                <div class="col-md-9">
+                                    {{ form_widget(form.level, { 'attr': {'class': 'select-select2', 'style': 'width: 100%' } }) }}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                {{ form_label(form.technologies, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+                                <div class="col-md-9">
+                                    {{ form_widget(form.technologies, { 'attr': {'class': 'select-select2', 'style': 'width: 100%'} }) }}
+                                </div>
+                            </div>
+                            {# Prérequis  #}
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Prérequis</label>
+                                <div class="col-md-9 requirements" data-prototype="        {% filter escape %}
+             {{ include('FormationAdminBundle:Form:prototype_requirements.html.twig', { 'form': form.requirements.vars.prototype|e }) }}
+         {% endfilter %}">
+                                    {%  for requirement in form.requirements %}
+                                        <div class="requirement-all-element">
+                                            <div class="col-md-5 requirement-element">
+                                                {{ form_label(requirement.technology, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+                                                <div class="col-md-9">
+                                                    {{ form_widget(requirement.technology, { 'attr': {'class': 'select-select2', 'style': 'width: 100%'} } ) }}
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 requirement-element">
+                                                {{ form_label(requirement.level, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+                                                <div class="col-md-9">
+                                                    {{ form_widget(requirement.level, { 'attr': {'class': 'select-select2', 'style': 'width: 100%'} }) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="form-group form-actions">
+                                <div class="col-md-3 col-md-offset-3">
+                                    {{ form_widget(form.save) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="formation-sessions">
+                        <div class="block">
+                            <div class="block-title">
+                                <div class="block-options pull-right">
+                                    <a href="{{ path('formation') }}" class="btn btn-alt btn-sm btn-default toggle-bordered enable-tooltip" data-toggle="button" title="Retourner à la liste">Retour</a>
+                                </div>
+                            </div>
+                            {# Session #}
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Session(s)</label>
+                                <div class="col-md-9 sessions" data-prototype="        {% filter escape %}
+             {{ include('FormationAdminBundle:Form:prototype_sessions.html.twig', { 'form': form.sessions.vars.prototype|e }) }}         {% endfilter %}">
+                                    {%  for session in form.sessions %}
+                                        <div class="session-all-element">
+                                            <div class="col-md-4 session-element">
+                                                {{ form_label(session.name, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+                                                <div class="col-md-9">
+                                                    {{ form_widget(session.name, { 'attr': {'class': 'form-control'} } ) }}
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 session-element">
+                                                {{ form_label(session.places, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+                                                <div class="col-md-9">
+                                                    {{ form_widget(session.places, { 'attr': {'class': 'form-control', 'data-slider-value': session.vars.value.places} }) }}
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 session-element">
+                                                {{ form_label(session.status, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+                                                <div class="col-md-9">
+                                                    {{ form_widget(session.status, { 'attr': {'class': 'select-select2', 'style': 'width: 100%'} }) }}
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 sessiondates" data-prototype="{% filter escape %}
+             {{ include('FormationAdminBundle:Form:prototype_sessiondate.html.twig', { 'form': session.sessionDates.vars.prototype|e }) }}         {% endfilter %}">
+                                                {%  for date in session.sessionDates %}
+                                                    <div class="sessiondate-all-element">
+                                                        <div class="col-md-3 sessiondate-element">
+                                                            {{ form_label(date.dateStart, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+                                                            <div class="col-md-9">
+                                                                {{ form_widget(date.dateStart, { 'attr': {'class': 'form-control date-session'} } ) }}
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3 sessiondate-element">
+                                                            {{ form_label(date.timeStart, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+                                                            <div class="col-md-9">
+                                                                {{ form_widget(date.timeStart, { 'attr': {'class': 'form-control time-session'} } ) }}
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3 sessiondate-element">
+                                                            {{ form_label(date.dateEnd, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+                                                            <div class="col-md-9">
+                                                                {{ form_widget(date.dateEnd, { 'attr': {'class': 'form-control date-session'} } ) }}
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3 sessiondate-element">
+                                                            {{ form_label(date.timeEnd, null, {'label_attr': {'class':'col-md-3 control-label'} }) }}
+                                                            <div class="col-md-9">
+                                                                {{ form_widget(date.timeEnd, { 'attr': {'class': 'form-control time-session'} } ) }}
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="form-group form-actions">
+                                <div class="col-md-3 col-md-offset-3">
+                                    {{ form_widget(form.saveagain) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{ form_widget(form._token) }}
+            </form>
+        </div>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,16 @@
+{% extends "::baseadmin.html.twig" %}
+
+{% block title %}
+    {{ parent() }} - Tableau de bord
+{% endblock %}
+
+{% block sidebarmenu %}
+    {{ include('FormationAdminBundle::sidebar-menu.html.twig',{ 'pseudo': 'Delphine'}) }}
+{% endblock %}
+
+ {% block headersection %}
+     {{ include('FormationAdminBundle::header.html.twig') }}
+ {% endblock %}
+            {% block body %}
+                kikoo
+            {% endblock %}

@@ -1,0 +1,14 @@
+<div class="datatable-action text-center">
+    <a href="{{ path('technology_edit', {'id':id}) }}">
+        <button class="btn btn-success btn-lg">
+            <i class="ace-icon fa fa-wrench  bigger-110 icon-only"></i>
+        </button>
+    </a>
+    <a data-toggle="modal" href="#delete-{{ id }}">
+        <button class="btn btn-danger btn-lg">
+            <i class="ace-icon fa fa-trash-o bigger-110 icon-only"></i>
+        </button>
+    </a>
+</div>
+
+{{ render(controller("FormationAdminBundle:Technology:deleteForm", {'id':id})) }}

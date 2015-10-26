@@ -1,3 +1,26 @@
+formation_media:
+    resource: "@FormationMediaBundle/Resources/config/routing.yml"
+    prefix:   /
+
+formation_front:
+    resource: "@FormationFrontBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+formation_admin:
+    resource: "@FormationAdminBundle/Resources/config/routing.yml"
+    prefix: /admin
+
+gallery:
+    resource: '@SonataMediaBundle/Resources/config/routing/gallery.xml'
+    prefix: /media/gallery
+
+media:
+    resource: '@SonataMediaBundle/Resources/config/routing/media.xml'
+    prefix: /media
+
+user_bundle:
+   resource: "@FormationUserBundle/Resources/config/routing.yml"

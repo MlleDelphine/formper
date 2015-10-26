@@ -1,0 +1,28 @@
+parameters:
+    baseDn: ou=Zephyr,ou=users,dc=zephyr-web,dc=fr
+fr3d_ldap:
+    driver:
+        host: rouen70.zephyr-web.fr
+        # accountDomainName: drakun.corp
+        # accountDomainNameShort: DRAKUN
+        # port: 389
+        # Optional #bindRequiresDn: true
+        # Optional #baseDn: dc=cbao, dc=lan
+        # Optional accountFilterFormat: (&(uid=%s))
+        # Optional #optReferrals: false # Optional
+        #useSsl: true # Enable SSL negotiation. Optional
+        #useStartTls: true
+        # Enable TLS negotiation. Optional user: baseDn: DC=drakun,DC=corp
+        # filter: (&(ObjectClass=User)(objectCategory=person))
+    user:
+        baseDn: %baseDn%
+        filter: (&(ObjectClass=Person))
+        #&(ObjectClass=Person)
+        attributes:
+            - { ldap_attr: loginshell, user_method: setUsername }
+            - { ldap_attr: cn, user_method: setName }
+            - { ldap_attr: mail, user_method: setEmail }
+            - { ldap_attr: uid, user_method: setUid }
+
+    service:
+        ldap_manager:  zephyr.user.ldap_manager

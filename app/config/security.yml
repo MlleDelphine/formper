@@ -3,12 +3,13 @@
 security:
     # http://symfony.com/doc/current/book/security.html#encoding-the-user-s-password
     encoders:
-        Symfony\Component\Security\Core\User\User: plaintext
+        FOS\UserBundle\Model\UserInterface: sha512
+        Formation\UserBundle\Entity\User: sha512
 
     # http://symfony.com/doc/current/book/security.html#hierarchical-roles
     role_hierarchy:
         ROLE_ADMIN:       ROLE_USER
-        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN]
 
     # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
     providers:
@@ -17,6 +18,13 @@ security:
                 users:
                     user:  { password: userpass, roles: [ 'ROLE_USER' ] }
                     admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
+        chain_provider:
+            chain:
+                providers: [fos_userbundle, fr3d_ldapbundle]
+        fos_userbundle:
+            id: fos_user.user_provider.username #id: fos_user.user_manager ?
+        fr3d_ldapbundle:
+            id: fr3d_ldap.security.user.provider
 
     # the main part of the security, where you can set up firewalls
     # for specific sections of your app
@@ -44,9 +52,40 @@ security:
             #anonymous: ~
             #http_basic:
             #    realm: "Secured Demo Area"
+        login:
+            pattern:   ^/admin/(login$|register|resetting)  # Les adresses de ces pages sont login, register et resetting
+            anonymous: true
+
+        admin:
+            pattern: ^/admin
+            form_login:
+                provider:    chain_provider
+                csrf_provider: form.csrf_provider
+                check_path: /admin/login_check
+                login_path: /login
+            logout:
+                path:   /admin/logout
+            anonymous:       true #à remettre à false
+        main:
+            pattern: ^/
+            fr3d_ldap: ~
+            form_login:
+                check_path: /login_check
+                login_path: /login
+                provider: fos_userbundle
+            logout:
+                path:    /logout
+                target: /
+                      # provider: fos_userbundle
+                      # csrf_provider: form.csrf_provider
+            anonymous:    true
 
     # with these settings you can restrict or allow access for different parts
     # of your application based on roles, ip, host or methods
     # http://symfony.com/doc/current/cookbook/security/access_control.html
     access_control:
         #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
+        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        #- { path: ^/admin/, role: ROLE_ADMIN } à remettre pour login

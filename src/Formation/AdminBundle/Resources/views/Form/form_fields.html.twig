@@ -1,0 +1,32 @@
+{% block boolean_widget %}
+    {% spaceless %}
+        <label class="switch switch-success">{{ form_widget(form) }}
+            <span></span>
+        </label>
+    {% endspaceless %}
+{% endblock %}
+
+{% block euro_widget %}
+    {% spaceless %}
+        <div class="input-group">
+            {{ form_widget(form, { 'attr': {'class': 'form-control'}} ) }}
+            <span class="input-group-addon"><i class="fa fa-euro"></i></span>
+        </div>
+    {% endspaceless %}
+{% endblock %}
+
+{% block horizontalSlider_widget %}
+    {% spaceless %}
+
+        {{ form_widget(form, { 'attr': {'class': 'form-control input-slider',
+            'data-slider-min': 0,
+            'data-slider-max': 100,
+            'sata-slider-step': 1,
+            'data-slider-orientation': 'horizontal',
+            'data-slider-selection': 'before',
+            'data-slider-tooltip': 'show'
+
+        }} ) }}
+
+    {% endspaceless %}
+{% endblock %}

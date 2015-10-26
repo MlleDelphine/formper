@@ -1,0 +1,30 @@
+session:
+    path:     /
+    defaults: { _controller: "FormationAdminBundle:Session:index" }
+
+session_show:
+    path:     /{id}/show
+    defaults: { _controller: "FormationAdminBundle:Session:show" }
+
+session_new:
+    path:     /new
+    defaults: { _controller: "FormationAdminBundle:Session:new" }
+
+session_create:
+    path:     /create
+    defaults: { _controller: "FormationAdminBundle:Session:create" }
+    methods:  POST
+
+session_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FormationAdminBundle:Session:edit" }
+
+session_update:
+    path:     /{id}/update
+    defaults: { _controller: "FormationAdminBundle:Session:update" }
+    methods:  [POST, PUT]
+
+session_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FormationAdminBundle:Session:delete" }
+    methods:  [POST, DELETE]

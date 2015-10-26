@@ -1,0 +1,5 @@
+services:
+#    type.extended_choice_type:
+#        class:  Formation\AdminBundle\Form\Type\HorizontalSliderType
+#            tags:
+#                - { name: form.type, alias: horizontalSlider }
