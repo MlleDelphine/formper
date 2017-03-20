@@ -178,7 +178,7 @@ genemu_form:
 
 #fr3d_ldap:
 #    driver:
-#        host:         rouen70.zephyr-web.fr
+#        host:         host_link.fr
 ##        port:         389    # Optional
 ##        version:        3    # I think this is specific to Windows AD - possibly 2003
 ##        username:     ldapproxyuser@yourADdomain    # Windows requires you to authenticate to be able to query
