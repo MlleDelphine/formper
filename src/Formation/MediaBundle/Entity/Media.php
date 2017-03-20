@@ -26,6 +26,11 @@ class Media extends BaseMedia
      *  @var string
      */
     private $identification_name;
+    
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    protected $galleryHasMedias;
 
     /**
      * @ORM\ManyToOne(targetEntity="Formation\FrontBundle\Entity\Formation", inversedBy="documents", cascade={"persist", "remove"})
@@ -65,10 +70,7 @@ class Media extends BaseMedia
         return $this->identification_name;
     }
 
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    protected $galleryHasMedias;
+   
 
     /**
      * Constructor
